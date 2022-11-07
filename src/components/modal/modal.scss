@@ -1,0 +1,65 @@
+@import "./../../sass/global.scss";
+
+.Modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: all;
+
+  .modalContent {
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 1rem 2rem;
+    border: 1px solid #888;
+    width: 50%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .contentContainer {
+    .tourContent {
+      li {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .imageContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+  .Modal .modalContent {
+    width: 80%;
+    transition: 0.3s;
+  }
+}
+
+/* PHONE */
+@include mobile {
+  .Modal .modalContent {
+    width: 90%;
+    transition: 0.3s;
+  }
+}

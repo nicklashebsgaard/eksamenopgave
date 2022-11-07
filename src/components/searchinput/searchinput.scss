@@ -1,0 +1,39 @@
+@import "./../../sass/global.scss";
+
+.SearchInput {
+  .SeachContainer {
+    display: flex;
+
+    input { 
+        margin: 0 10px 0 0;
+    }
+
+    .inpSearch {
+      border-radius: 15px;
+      width: 150px;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .searchButton {
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+
+      .search {
+        font-weight: bold;
+        padding: 0.3rem 0.3rem;
+        color: #4285f4;
+      }
+    }
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .SearchInput .SeachContainer .inpSearch {
+    width: 100px;
+    transition: .3s;
+  }
+}

@@ -1,0 +1,23 @@
+.Tours {
+  padding: 3rem 3rem;
+
+  .cardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 30%;
+    border: 1px solid rgb(164, 164, 164);
+    margin-top: 2rem;
+    border-radius: 3px;
+    margin-right: 1rem;
+    padding: 30px 20px;
+    background-color: rgb(219, 219, 219);
+
+    .toursContent {
+        overflow-wrap: anywhere;
+    }
+  }
+}

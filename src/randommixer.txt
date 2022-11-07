@@ -1,0 +1,29 @@
+function randomMixer(arr) {
+    for (let i = arr.length -1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i+1));
+      let k = arr[i];
+      arr[i] = arr[j];
+      arr[j] = k;
+    }
+    return arr;
+  }
+
+  return (
+
+    <section className="Home">
+
+      {error && <ErrorMessage />}
+      {loading && <Loader />}
+      
+      {tours && randomMixer(tours).map(t =>
+
+        <div className="card" key={t._id}>
+         <h2>{t.title}</h2>
+         
+         </div>
+         )}
+    
+    
+    </section>
+
+  );

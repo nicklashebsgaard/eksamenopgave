@@ -1,0 +1,17 @@
+.MessageBox {
+    width: 80%;
+    border: 1px solid gray;
+    background-color: gainsboro;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 0px 4px 0px;
+    
+    button {
+        border-radius: 5px;
+        padding: 5px 5px;
+        border: none;
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+}

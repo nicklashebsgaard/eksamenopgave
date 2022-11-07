@@ -1,0 +1,55 @@
+// useState, useEffect
+import { useState, useEffect } from "react";
+
+// API
+import {getAllTours} from "./../helpers/apikald";
+
+const Home = () => {
+
+  const [tours, setTours] = useState()
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
+
+  // Opkald til API'et når component er loadet
+  useEffect(() => {
+
+    setLoading(true) // vis en loader mens api'et kaldes (og endnu ikke har svaret)
+
+    getAllTours()
+      .then((response) => {
+        setTours(response.data) // put data fra api'et i state
+        setError(false) 
+      })
+      .catch((err) => {
+        setError(true) // nulstill en evt. tidligere fejl
+        setTours()
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+
+  }, [])
+
+  return (
+
+    <div className="Home">
+
+      {error && <ErrorMessage />}
+      {loading && <Loader />}
+    
+    {tours && tours.map(t =>
+
+        <div className="card" key={t._id}>
+         <h2>{t.title}</h2>
+         
+         </div>
+         )}
+    
+    
+    </div>
+
+  );
+
+};
+
+export default Home;

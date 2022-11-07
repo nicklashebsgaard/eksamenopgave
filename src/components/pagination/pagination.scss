@@ -1,0 +1,32 @@
+.Pagination {
+  .buttonsContainer {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  button {
+    cursor: pointer;
+    margin: 2px;
+  }
+
+  #numberOfPages {
+    padding: 0.2rem 0.4rem;
+  }
+
+  .paginationActive {
+    border: 2px solid #0c1729;
+    color: #0c1729;
+  }
+
+  .navigate_before,
+  .navigate_next {
+    color: rgb(134, 131, 131);
+    float: left;
+    padding: 0.2rem 0.4rem;
+  }
+}

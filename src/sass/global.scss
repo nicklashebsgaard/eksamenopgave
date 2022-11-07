@@ -1,0 +1,44 @@
+// Til at placer i midden
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------- breakpoints ------------------- */
+// Små enheder (landscape phones)
+$widthPhone: 576px;
+@mixin mobile {
+  @media (max-width: #{$widthPhone}) {
+    @content;
+  }
+}
+
+// Medium enheder (tablets, 768px )
+$widthTablet: 768px;
+@mixin tablet {
+  @media (max-width: #{$widthTablet}) {
+    @content;
+  }
+}
+
+// Store enheder (desktops, 900px)
+$widthDesktop: 900px;
+@mixin desktop {
+  @media (max-width: #{$widthDesktop}) {
+    @content;
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+}
+
+/* TABLET */
+@include tablet {
+}
+
+/* PHONE */
+@include mobile {
+}

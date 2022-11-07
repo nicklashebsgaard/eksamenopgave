@@ -1,0 +1,65 @@
+.AdminAbout {
+  width: 100%;
+  padding: 10px;
+
+  div {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    width: 300px;
+  }
+
+  label {
+    display: block;
+    padding: 10px 10px 10px 0px;
+    font-size: 1.1rem;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  div.quill {
+    padding: 0;
+    width: 80%;
+  }
+
+  input {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(168, 168, 168);
+  }
+
+  .reset {
+    border-radius: 10px;
+    background-color: #dc3545;
+    cursor: pointer;
+    margin-left: 20px;
+    .cancel {
+      padding: 0.15rem;
+    }
+  }
+
+  .ret {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px 0 10px 10px;
+    padding: 0.4rem 0.4rem;
+    font-weight: bold;
+    background-color: #78f94d;
+    cursor: pointer;
+
+    span {
+      padding-left: 8px;
+    }
+
+    &:hover {
+      background-color: #78f94d96;
+    }
+  }
+}
