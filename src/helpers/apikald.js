@@ -2,6 +2,48 @@ import axios from "axios";
 
 const axiosBase = axios.create({baseURL: "http://localhost:5333/"})
 
+// ---------- Kontakt info  -------------------------------------------
+// ------------------------------------------------------------
+
+export const contactInformation = () => {
+
+    // GET * http://localhost:5333/contactinformation
+
+    let response = axiosBase.get("contactinformation");
+    
+    return response;
+
+}
+
+// ---------- SLIDER -------------------------------------------
+// ------------------------------------------------------------
+
+export const forsideSlider = () => {
+
+    // GET * http://localhost:5333/slider
+
+    let response = axiosBase.get("slider");
+
+    return response;
+
+}
+
+
+// ---------- OM OS -------------------------------------------
+// ------------------------------------------------------------
+
+// GET - Henter about (Med alt)
+
+export const getOmos = () => {
+
+    // GET * http://localhost:5333/about
+
+    let response = axiosBase.get("about");
+    
+    return response;
+
+}
+
 // ---------- TOURS -------------------------------------------
 // ------------------------------------------------------------
 

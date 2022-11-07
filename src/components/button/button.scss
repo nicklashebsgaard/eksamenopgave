@@ -1,0 +1,15 @@
+@import "./../../sass/global.scss";
+
+.Button {
+    .buttonStyle{
+    background-color: $safety-orange-blaze-orange;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: $ButtonRadius;
+    font-weight: bold;
+    color: $white;
+    margin-top: 2rem;
+    cursor: pointer;
+    }
+}

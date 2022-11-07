@@ -1,0 +1,31 @@
+@import "./../../sass/global.scss";
+
+.NeedHelp {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: $independence;
+
+    h2, p {
+        color: $white;
+    }
+    h2 span{
+        color: $safety-orange-blaze-orange;
+    }
+
+    p{
+        padding-top: 1rem;
+    }
+
+
+    .buttonStyle{
+        background-color: $safety-orange-blaze-orange;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        border: none;
+        border-radius: $ButtonRadius;
+        font-weight: bold;
+        color: $white;
+        margin-top: 2rem;
+        cursor: pointer;
+        }
+}

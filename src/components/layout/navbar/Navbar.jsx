@@ -33,7 +33,7 @@ const Navbar = () => {
     
       <div className={showMenu === true ? "navbar-container active" : "navbar-container"}>
         <ul>
-
+          
           <li className="menuItem">
             {/* End tilføjet for at ungå at hom har active konstant */}
           <NavLink to="/" end>Forside</NavLink> 

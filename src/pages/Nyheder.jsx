@@ -1,3 +1,5 @@
+// SCSS
+import "./nyheder.scss";
 
 import React from 'react'
 

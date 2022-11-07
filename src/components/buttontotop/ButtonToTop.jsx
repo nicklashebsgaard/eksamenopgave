@@ -29,7 +29,7 @@ const ButtonToTop = () => {
 
   }, [])
 
-  return (fromTop > 40 && 
+  return (fromTop > 20 && 
 
   <div className="ButtonToTop" >
 
@@ -39,8 +39,8 @@ const ButtonToTop = () => {
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }}
       >
-        <span className="material-symbols-outlined arrow_upward">
-          arrow_upward
+        <span className="material-symbols-outlined expand_less">
+          expand_less
         </span>
       </button>
 

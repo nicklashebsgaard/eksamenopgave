@@ -4,6 +4,13 @@ import "./slider.scss";
 // React useState, useEffect
 import React, { useState, useEffect } from "react";
 
+// html-react-parser
+import Parser from "html-react-parser";
+
+// icons 
+import {SlArrowLeftCircle} from "react-icons/sl";
+import {SlArrowRightCircle} from "react-icons/sl";
+
 // inspiration til slideren
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
 
@@ -68,34 +75,25 @@ const Slider = (props) => {
           sliderImages.map((s, i) => (
 
             <div className="mySlides fade" key={"slider" + i}>
-              <div className="numbertext">
-                {i + 1} / {sliderImages.length}
-              </div>
-              <img src={imagePath + s} style={{ width: "100%" }} alt="" />
+             
+              <img src={imagePath + s.image} style={{ width: "100%" }} alt="" />
 
-              {/* <div className="text">Caption Text</div> */}
+              <div className="text">{Parser(s.caption)}
+                <button className="SliderButton">Kontakt os</button>
+              </div>
+
+              
             </div>
           ))}
 
         {/* <!-- Next and previous buttons --> */}
         <span className="prev" onClick={() => setSlideIndex(slideIndex - 1)}>
-          &#10094;
+          <SlArrowLeftCircle />
         </span>
 
         <span className="next" onClick={() => setSlideIndex(slideIndex + 1)}>
-          &#10095;
+          <SlArrowRightCircle />
         </span>
-
-        {/* <!-- The dots/circles --> */}
-        <div className="dotContainer">
-          {sliderImages &&
-            sliderImages.map((s, i) => (
-
-              <span onClick={ () => setSlideIndex(i)} className={ i === slideIndex ? "dot active" : "dot"} key={"dot" + i}></span>
-
-            ))}
-
-        </div>
 
       </div>
 

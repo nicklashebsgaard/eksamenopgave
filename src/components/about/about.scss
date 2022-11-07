@@ -1,0 +1,27 @@
+@import "./../../sass/global.scss";
+
+.About {
+    width: 80%;
+    margin: 0 auto;
+
+    .contentContainer {
+        padding: 4rem 5%;
+        text-align: center;
+    }
+
+    h2 {
+        padding: 1rem 0;
+    }
+
+    .buttonLæsMere {
+    background-color: $safety-orange-blaze-orange;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: $ButtonRadius;
+    font-weight: bold;
+    color: $white;
+    margin: 2.5rem 0;
+    cursor: pointer;
+    }
+}

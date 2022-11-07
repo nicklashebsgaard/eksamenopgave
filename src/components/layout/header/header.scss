@@ -3,13 +3,35 @@
 .Header {
   background-color: $onyx;
   padding: .5rem;
-
+  height: 120px;
+  
   .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: auto;
     width: 80%;
   }
   // Brand
   .navbarBrand {
     text-decoration: none;
+  }
+
+  .contaktInfomationBox {
+    color: $white;
+  }
+
+  .infoContainer {
+    display: flex;
+
+    p{
+        padding: 0 5px;
+    }
+    p:nth-child(3){
+        margin-right: 2rem;
+    }
+    p:nth-child(5){
+        margin-right: 2rem;
+    }
   }
 }
