@@ -4,18 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  margin: auto;
   background-color: rgb(130, 122, 122);
   color: white;
   position: relative; // aht burger-buttons absolute position
   padding: 0 1rem;
-
-  // Brand
-  .navbar-brand {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    text-decoration: none;
-    color: white;
-  }
 
   // burger til resposive
   .burger-button {

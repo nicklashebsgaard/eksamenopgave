@@ -1,3 +1,138 @@
+$eerie-black: #222222ff;
+$star-command-blue: #337ab7ff;
+$onyx: #343742ff;
+$independence: #474b5aff;
+$dim-gray: #676a73ff;
+$sonic-silver: #777777ff;
+$gainsboro: #d4dae3ff;
+$platinum: #e5e5e5ff;
+$cultured: #f8f8faff;
+$safety-orange-blaze-orange: #ff6600ff;
+$blackis: #000;
+$white: #fff;
+
+$gradient-top: linear-gradient(
+  0deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+$gradient-radial: radial-gradient(
+  #222222ff,
+  #337ab7ff,
+  #343742ff,
+  #474b5aff,
+  #676a73ff,
+  #777777ff,
+  #d4dae3ff,
+  #e5e5e5ff,
+  #f8f8faff,
+  #ff6600ff
+);
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+
 // Til at placer i midden
 @mixin flexCenter {
   display: flex;

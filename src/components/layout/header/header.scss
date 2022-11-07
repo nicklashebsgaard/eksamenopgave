@@ -1,0 +1,15 @@
+@import "./../../../sass/global.scss";
+
+.Header {
+  background-color: $onyx;
+  padding: .5rem;
+
+  .contentContainer {
+    margin: auto;
+    width: 80%;
+  }
+  // Brand
+  .navbarBrand {
+    text-decoration: none;
+  }
+}

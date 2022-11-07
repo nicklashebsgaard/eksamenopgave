@@ -1,5 +1,5 @@
 // SCSS
-import "./contact.scss";
+import "./kontakt.scss";
 
 // React useState, useEffect
 import React, { useState, useEffect } from "react";
@@ -7,12 +7,12 @@ import React, { useState, useEffect } from "react";
 // COMPONENTS
 
 
-const Contact = () => {
+const Kontakt = () => {
 
  
   return (
 
-    <section className="Contact">
+    <section className="Kontakt">
 
       <h1>Kontakt</h1>
 
@@ -22,4 +22,4 @@ const Contact = () => {
 
 };
 
-export default Contact;
+export default Kontakt;

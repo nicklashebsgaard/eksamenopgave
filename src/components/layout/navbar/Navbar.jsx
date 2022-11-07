@@ -2,7 +2,7 @@
 import "./navbar.scss";
 
 // react-router-dom
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // useContext useState
 import { useContext, useState } from "react";
@@ -24,9 +24,6 @@ const Navbar = () => {
 
     <nav className="Navbar"> 
 
-      {/* BRAND */}
-      <Link className="navbar-brand" to="/">(Brand)</Link>
-
       {/* BURGER */}
       <div className={showMenu === true ? "burger-button open" : "burger-button"} onClick={ () => setShowMenu(!showMenu)}>
         <span className="bar bar1"></span>
@@ -39,18 +36,22 @@ const Navbar = () => {
 
           <li className="menuItem">
             {/* End tilføjet for at ungå at hom har active konstant */}
-          <NavLink to="/" end>Home</NavLink> 
-          </li>
-
-          <li className="menuItem">
-          <NavLink to="om-os">About</NavLink> 
-          </li>
-
-          <li className="menuItem">
-          <NavLink to="kontakt">Contact</NavLink> 
+          <NavLink to="/" end>Forside</NavLink> 
           </li>
           <li className="menuItem">
-          <NavLink to="tours">Tours (pageination)</NavLink> 
+          <NavLink to="om-os">Om os</NavLink> 
+          </li>
+          <li className="menuItem">
+          <NavLink to="service">Service</NavLink> 
+          </li>
+          <li className="menuItem">
+          <NavLink to="faq">FAQ</NavLink> 
+          </li>
+          <li className="menuItem">
+          <NavLink to="nyheder">Nyheder</NavLink> 
+          </li>
+          <li className="menuItem">
+          <NavLink to="kontakt">Kontakt os</NavLink> 
           </li>
 
           {

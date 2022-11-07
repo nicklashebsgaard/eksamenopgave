@@ -7,20 +7,21 @@ import { Route, Routes } from 'react-router-dom';
 // COMPONENTS
 import Layout from './components/layout/Layout';
 import AdminLayout from './components/layout/admin/adminlayout/AdminLayout';
-import About from './pages/About';
 import Login from './components/login/Login';
 
 // PAGES
-import Home from './pages/Home';
-import Contact from './pages/Contact';
 import NoMatch from './components/nomatch/NoMatch';
 import AdminHome from './pages/admin/adminhome/AdminHome';
 import AdminTours from './pages/admin/admintours/AdminTours';
 import AdminToursCreate from './pages/admin/admintourscreate/AdminToursCreate';
 import AdminToursEdit from './pages/admin/admintoursedit/AdminToursEdit';
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
-import SearchResult from './pages/SearchResult';
-import Tours from './pages/Tours';
+import Forside from './pages/Forside';
+import Kontakt from './pages/Kontakt';
+import Omos from './pages/Omos';
+import Service from './pages/Service';
+import Faq from './pages/Faq';
+import Nyheder from './pages/Nyheder';
 
 const App = () => {
 
@@ -37,13 +38,14 @@ const App = () => {
 
       <Route path='/' element={<Layout />}> 
       
-        <Route index element={<Home />} /> 
-        <Route path="kontakt" element={<Contact />} /> 
-        <Route path="om-os" element={<About />} /> 
-        <Route path="tours" element={<Tours />} /> 
-      
+        <Route index element={<Forside />} /> 
+        <Route path="kontakt" element={<Kontakt />} /> 
+        <Route path="service" element={<Service />} /> 
+        <Route path="faq" element={<Faq />} /> 
+        <Route path="nyheder" element={<Nyheder />} /> 
+        <Route path="om-os" element={<Omos />} /> 
+
         <Route path="login" element={<Login />} /> 
-        <Route path="search/:q" element={<SearchResult />} />
 
         <Route path="*" element={<NoMatch />} /> 
       

@@ -1,18 +1,18 @@
 // SCSS
-import "./about.scss";
+import "./omos.scss";
 
 //React useState, useEffect
 
 
 // COMPONENTS
 
-const About  = () => {
+const Omos  = () => {
 
   return (
 
-    <section className="About">
+    <section className="Omos">
       
-      <h1>About</h1>
+      <h1>Om os</h1>
       
     
     
@@ -24,4 +24,4 @@ const About  = () => {
 
 };
 
-export default About;
+export default Omos;
