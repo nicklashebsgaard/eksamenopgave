@@ -47,7 +47,7 @@ const VoresService = () => {
   return (
 
     <section className='VoresService'>
-
+      
     {error && <ErrorMessage />}
     {loading && <Loader />}
 
@@ -55,7 +55,11 @@ const VoresService = () => {
     <h2>Vores <span>services</span></h2>
 
     <p>lorem ipsum dolor sit amet consectetur adipsicing elit sed do eiusm tempor</p>
-    <BsCircle className="circle" style={{ color: "#FF6600ff"}}/>
+    <div className="line">
+      <BsCircle className="circle" style={{ color: "#FF6600ff"}}/>
+    </div>
+    
+
     </div>
 
     <div className="imageContainer">
@@ -64,9 +68,14 @@ const VoresService = () => {
     
     {service && service.map(s =>
 
+    
     <div className="serviceContent" key={s._id}>
-    <h2>{s.title}</h2>
-    <p>{s.teaser}</p>
+    <span className={s.icon}></span>
+
+    <div className="textContainer">
+      <h2>{s.title}</h2>
+      <p>{s.teaser}</p>
+    </div>
  
     </div>
     )}

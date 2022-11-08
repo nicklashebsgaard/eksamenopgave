@@ -11,7 +11,7 @@ const NeedHelp = () => {
         
         <div className="contentContainer">
 
-        <h2>Skal du bruge <span>hjælp</span> fra <span>Strøm</span> </h2>
+        <h2>Skal du bruge <span>hjælp</span> fra <span>Strøm</span></h2>
 
         <p>lorem ipsum dolor sit amet consectetur</p>
 

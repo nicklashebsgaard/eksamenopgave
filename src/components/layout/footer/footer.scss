@@ -1,0 +1,25 @@
+@import "./../../../sass/global.scss";
+
+footer {
+    height: auto;
+    background-color: $onyx;
+
+    .footerContent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 70%;
+        padding: 4rem 0;
+        margin: 0 auto;
+
+        .brandContainer {
+            grid-column: 1/2;
+        }
+
+        .textContainer {
+            grid-column: 1/2;
+            color: $gainsboro;
+        }
+    }
+
+   
+}

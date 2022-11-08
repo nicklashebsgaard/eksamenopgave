@@ -58,7 +58,7 @@ const Header = () => {
       <div className="contentContainer">
         {/* BRAND */}
         <div className="brandContainer">
-          <Link className="navbarBrand" to="/"> <img src={Brand} alt="" /></Link>
+          <Link className="navbarBrand" to="/"> <img src={Brand} alt="Logo" /></Link>
         </div>
 
         <div className="contaktInfomationBox">

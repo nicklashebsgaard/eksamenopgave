@@ -1,0 +1,67 @@
+@import "./../../sass/global.scss";
+
+.VoresTeam {
+  background-color: $white;
+
+  .textContainer {
+    text-align: center;
+
+    h2 {
+      padding: 4rem 0 1rem 0;
+    }
+    span {
+      color: $safety-orange-blaze-orange;
+    }
+
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .imageContainer {
+    padding: 1rem 1rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: $platinum;
+      clip-path: polygon(51% 55%, 100% 45%, 100% 100%, 0 100%, 0 59%);
+    }
+
+    .hoverCard {
+      bottom: -100px;
+    }
+
+    &:hover .hoverCard {
+      content: "";
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+      background-color: $safety-orange-blaze-orange;
+      clip-path:  polygon(53% 55%, 100% 45%, 100% 100%, 0 100%, 0 41%);
+      transition: all 1s ease-in;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
