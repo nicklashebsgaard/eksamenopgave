@@ -1,17 +1,22 @@
 @import "./../../sass/global.scss";
 
 .VoresService {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 4rem;
-  grid-row-gap: 0px;
-  margin-bottom: 4rem;
+
+  .gridContainer {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
 
   .titleContainer {
     padding-top: 4rem;
     grid-column: 1/3;
-    
+
     h2 {
       span {
         color: $safety-orange-blaze-orange;
@@ -22,9 +27,8 @@
       padding: 1rem 0;
       color: $black-shadows;
     }
-
   }
-  
+
   .line {
     display: flex;
     justify-content: center;
@@ -51,7 +55,7 @@
   .serviceContent {
     display: grid;
     grid-template-columns: 0fr 1fr;
-    
+
     span {
       color: $safety-orange-blaze-orange;
       margin-right: 1rem;

@@ -47,6 +47,7 @@ const VoresTeam = () => {
             <div className="textContainer">
                 <h2>Vores <span>team</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
+                
             </div>
 
         <div className="contentContainer">
@@ -56,7 +57,7 @@ const VoresTeam = () => {
                 <div className="size" key={t._id}>
                     
                     <div className="imageContainer">
-                            <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" />
+                            <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" loading="lazy" />
                         <div className="hoverCard" >
                             {t.name}
                             {t.title}

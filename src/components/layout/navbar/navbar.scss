@@ -38,20 +38,8 @@
       width: 100%;
       background-color: $blackis;
       border-radius: 10px;
-      transition: all 1s ease;
     }
 
-    &.open .bar1 {
-      transform: rotate(-45deg) translate(-5px, 5px);
-    }
-
-    &.open .bar2 {
-      opacity: 0;
-    }
-
-    &.open .bar3 {
-      transform: rotate(45deg) translate(-7.5px, -7.5px);
-    }
   }
 
   // MENUEN

@@ -61,9 +61,8 @@ const VoresKunder = () => {
           lorem ipsum dotor sit amet consectetur adipsicing etit sed do eiusm
           tempor
         </p>
-
+        
       </div>
-      
       <Carousel Carousel autoplay="true" wrapAround="true" autoplayInterval="3500">
       <div className="flexContainer">
      
@@ -76,6 +75,7 @@ const VoresKunder = () => {
                 <img
                   src={"http://localhost:5333/images/testimonial/" + t.image}
                   alt="kunde"
+                  loading="lazy"
                 />
                 <h2>{t.name}</h2>
                 <h3>{t.title}</h3>
@@ -86,7 +86,6 @@ const VoresKunder = () => {
    
       </div>
       </Carousel>
-      
     </section>
   );
 };

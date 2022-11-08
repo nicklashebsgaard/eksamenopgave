@@ -76,7 +76,7 @@ const Slider = (props) => {
 
             <div className="mySlides fade" key={"slider" + i}>
              
-              <img src={imagePath + s.image} style={{ width: "100%" }} alt="" />
+              <img src={imagePath + s.image} style={{ width: "100%" }} alt="slider fotos" loading="lazy" />
 
               <div className="containerContent">
                 <div className="text">

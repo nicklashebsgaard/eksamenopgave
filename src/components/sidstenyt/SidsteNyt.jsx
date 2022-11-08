@@ -1,7 +1,7 @@
-// SCSS 
+// SCSS
 import "./sidstenyt.scss";
 
-// API 
+// API
 import { getNews } from "../../helpers/apikald";
 
 // React useState, useEffect
@@ -13,75 +13,80 @@ import Loader from "./../loader/Loader";
 
 const SidsteNyt = () => {
 
-    const [nyheder, setNyheder] = useState()
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
+  const [nyheder, setNyheder] = useState();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-    // Opkald til API'et når component er loadet
-    useEffect(() => {
+  // Opkald til API'et når component er loadet
+  useEffect(() => {
+    setLoading(true); // vis en loader mens api'et kaldes (og endnu ikke har svaret)
 
-        setLoading(true) // vis en loader mens api'et kaldes (og endnu ikke har svaret)
-    
-        getNews()
-          .then((response) => {
-            setNyheder(response.data) // put data fra api'et i state
-            setError(false) 
-          })
-          .catch((err) => {
-            setError(true) // nulstill en evt. tidligere fejl
-            setNyheder()
-          })
-          .finally(() => {
-            setLoading(false)
-          })
-    
-      }, [])
+    getNews()
+      .then((response) => {
+        setNyheder(response.data); // put data fra api'et i state
+        setError(false);
+      })
+      .catch((err) => {
+        setError(true); // nulstill en evt. tidligere fejl
+        setNyheder();
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-      const klipTekst = (txt, minAntalKarakterer) => {
-
-        txt = txt.replace( /<\/?[^>]+(>|$)/g, "" ); // fjern alle html-tags med regex (regular expressions)       
-        txt = txt.substring( 0, txt.indexOf( " ", minAntalKarakterer ) ); // udtræk den bid af teksten fra plads 0 til "maxAntalKarakterer" men ved et mellemrum  
-        return txt; // returner resultatet 
-      }
+  const klipTekst = (txt, minAntalKarakterer) => {
+    txt = txt.replace(/<\/?[^>]+(>|$)/g, ""); // fjern alle html-tags med regex (regular expressions)
+    txt = txt.substring(0, txt.indexOf(" ", minAntalKarakterer)); // udtræk den bid af teksten fra plads 0 til "maxAntalKarakterer" men ved et mellemrum
+    return txt; // returner resultatet
+  };
 
   return (
 
     <section className="SidsteNyt">
 
-        {error && <ErrorMessage />}
-        {loading && <Loader />}
+      {error && <ErrorMessage />}
+      {loading && <Loader />}
 
-    <div className="titleContainer">
-        <h2>Sidste <span>nyt</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
-    </div>
+      <div className="titleContainer">
+        <h2>
+          Sidste <span>nyt</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
+          tempor
+        </p>
+      </div>
 
-    <div className="contentContainer">
+      <div className="contentContainer">
+        {nyheder &&
+          nyheder.slice(0, 3).map((n) => (
+            <div className="newsCard" key={n._id}>
+              {/* {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})} */}
 
-    {nyheder && nyheder.slice(0, 3).map(n =>
+              <div className="imageContainer">
+                <img
+                  src={"http://localhost:5333/images/news/" + n.image}
+                  alt="News"
+                  loading="lazy"
+                />
+              </div>
 
-    <div className="newsCard" key={n._id}>
+              <div className="textContainer">
+                <h3>{n.title}</h3>
+                <p>{klipTekst(n.content, 100)}...</p>
+              </div>
 
-        {/* {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})} */}
+            </div>
 
-        <div className="imageContainer">
-            
-                <img src={"http://localhost:5333/images/news/" + n.image} alt="News" />
-        </div>
+          ))}
 
-        <div className="textContainer">
-            <h3>
-            {n.title}
-            </h3>
-            <p>{klipTekst(n.content, 100)}...</p>
-        </div>
+      </div>
+      
+            <div className="buttonContainer">
+              <button className="buttonStyle">FLERE NYHEDER ...</button>
+            </div>
 
-    </div>
-    )}
-
-
-    </div>
-    
     </section>
 
   );

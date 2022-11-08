@@ -17,6 +17,7 @@ import { useState, useEffect } from "react";
 // COMPONENTS
 import ErrorMessage from "./../errormessage/ErrorMessage";
 import Loader from "./../loader/Loader";
+import BookNow from "../booknow/BookNow";
 
 const VoresService = () => {
 
@@ -51,6 +52,8 @@ const VoresService = () => {
     {error && <ErrorMessage />}
     {loading && <Loader />}
 
+    <div className="gridContainer">
+
     <div className="titleContainer">
     <h2>Vores <span>services</span></h2>
 
@@ -63,7 +66,7 @@ const VoresService = () => {
     </div>
 
     <div className="imageContainer">
-        <img src={ServiceWorker} alt="Service worker" />
+        <img src={ServiceWorker} alt="Service worker" loading="lazy" />
     </div>
     
     {service && service.map(s =>
@@ -80,6 +83,11 @@ const VoresService = () => {
     </div>
     )}
 
+
+    </div>
+   
+    
+    <BookNow />
     </section>
 
   );

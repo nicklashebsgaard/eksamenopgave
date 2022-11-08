@@ -42,6 +42,36 @@
 
     .textContainer {
       padding: 1rem 1rem;
+
+      h3 {
+        padding-bottom: 1rem;
+      }
+
+      p{
+        color: $sonic-silver;
+      }
     }
   }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .buttonStyle{
+    background-color: $safety-orange-blaze-orange;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: $ButtonRadius;
+    font-weight: bold;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        color: $safety-orange-blaze-orange;
+        background-color: transparent;
+        border: 1px solid $safety-orange-blaze-orange;
+      }
+    }
+
 }

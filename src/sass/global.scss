@@ -14,14 +14,11 @@ $blackis: #000;
 $white: #fff;
 $spanish-red: #E80426ff;
 
-
+// Fonts
 $Fonts-use: "Flaticon";
 .App {
   font-family: $Fonts-use, Arial, Helvetica, sans-serif;
 }
-
-
-// Fonts
 
 @import "./Fonts/flaticon";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
