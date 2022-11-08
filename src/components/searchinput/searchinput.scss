@@ -1,18 +1,22 @@
 @import "./../../sass/global.scss";
 
 .SearchInput {
+  
   .SeachContainer {
-    position: relative;
+    position: absolute;
     height: 40px;
     width: 150px;
+    right: 10px;
+    top: 15px;
     overflow: hidden;
-    border: none;
+    border: 1px solid #d4dae3ff;
+    border-radius: $ButtonRadius;
 
     input { 
       width: 100%;
       height: 100%;
-      padding: 20px;
-      border: 1px solid rgba(220, 220, 220, 0.46);
+      text-indent: 10px; 
+      border: none;
       background-color: $white;
     }
 
@@ -23,29 +27,12 @@
     .searchButton {
     position: absolute;
     right: 0;
-    font-size: 20px;
-    color: #001A23;
     background-color: $white;
-    height: 40px;
-    width: 40px;
     text-align: center;
-    padding: 10px 0;
-    transition: .5s;
+    padding: 7px 0;
     border: none;
     cursor: pointer;
    }
-
-   .search:hover {
-    font-size: 22px;
-   }
   }
 }
 
-/* ------------------- breakpoints ------------------- */
-/* PHONE */
-@include mobile {
-  .SearchInput .SeachContainer .inpSearch {
-    width: 100px;
-    transition: .3s;
-  }
-}

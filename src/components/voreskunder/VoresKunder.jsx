@@ -15,6 +15,7 @@ import ErrorMessage from "./../errormessage/ErrorMessage";
 import Loader from "./../loader/Loader";
 
 const VoresKunder = () => {
+
   const [testimonial, setTestimonial] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -63,12 +64,12 @@ const VoresKunder = () => {
         </p>
         
       </div>
-      <Carousel Carousel autoplay="true" wrapAround="true" autoplayInterval="3500">
+      <Carousel Carousel autoplay="true" wrapAround="true" slidesToShow={1} autoplayInterval="3500">
       <div className="flexContainer">
      
       {testimonial &&
-        randomMixer(testimonial)
-          .slice(0, 3)
+        randomMixer(testimonial).
+        slice(0, 3)
           .map((t) => (
             <div className="testimonialCard" key={t._id}>
               <div className="cardContent">

@@ -53,7 +53,7 @@ $widthTablet: 768px;
 }
 
 // Store enheder (desktops, 900px)
-$widthDesktop: 900px;
+$widthDesktop: 980px;
 @mixin desktop {
   @media (max-width: #{$widthDesktop}) {
     @content;

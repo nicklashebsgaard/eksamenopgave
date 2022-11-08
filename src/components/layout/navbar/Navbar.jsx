@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink to="kontakt">Kontakt os</NavLink> 
           </li>
 
-          {
+          {/* {
             !user && 
             <li className="menuItem">
               <NavLink to="login">Login</NavLink> 
@@ -73,7 +73,7 @@ const Navbar = () => {
               </li>
             </div>
             </>
-          }
+          } */}
 
           <div className="searchContainer">
             <li>
