@@ -16,3 +16,14 @@
     border: 2px solid darken(#4682b4, 15%);
   } */
 }
+
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+
+  .Forside {
+    margin-top: 0;
+  }
+  
+}

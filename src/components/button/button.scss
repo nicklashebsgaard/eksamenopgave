@@ -11,5 +11,11 @@
     color: $white;
     margin-top: 2rem;
     cursor: pointer;
+
+    &:hover {
+        color: $safety-orange-blaze-orange;
+        background-color: transparent;
+        border: 1px solid $safety-orange-blaze-orange;
+      }
     }
 }

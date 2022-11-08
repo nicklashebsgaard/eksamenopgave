@@ -1,12 +1,12 @@
 // SCSS 
 import "./button.scss";
 
-const Button = () => {
+const Button = ({children}) => {
 
   return (
 
     <button className='Button buttonStyle'>
-        
+        {children}
     </button>
 
   );

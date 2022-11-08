@@ -14,6 +14,9 @@ import ButtonToTop from "./../components/buttontotop/ButtonToTop";
 import Slider from "../components/slider/Slider";
 import About from "../components/about/About";
 import NeedHelp from "../components/needhelp/NeedHelp";
+import VoresService from "../components/voresservice/VoresService";
+import VoresKunder from "../components/voreskunder/VoresKunder";
+
 const Forside = () => {
 
   const [sliderData, setSliderData] = useState()
@@ -63,6 +66,9 @@ const Forside = () => {
     
       <About />
       <NeedHelp />
+      <VoresService />
+      <VoresKunder />
+      
   </> 
 
   );

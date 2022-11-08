@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 80%;
+    width: 70%;
   }
   // Brand
   .navbarBrand {
@@ -23,6 +23,7 @@
 
   .infoContainer {
     display: flex;
+    flex-wrap: wrap;
 
     p{
         padding: 0 5px;

@@ -10,7 +10,7 @@ import { getOmos } from "./../../helpers/apikald";
 // COMPONENTS
 import ErrorMessage from "./../errormessage/ErrorMessage";
 import Loader from "./../loader/Loader";
-import Button from "../button/Button";
+import Button from "./../button/Button";
 
 const About = () => {
 
@@ -54,7 +54,7 @@ const About = () => {
                 </>
             }
             
-            <button className="buttonLæsMere">LÆS MERE</button>
+            <Button>LÆS MERE</Button>
         </div>
         
     </section>

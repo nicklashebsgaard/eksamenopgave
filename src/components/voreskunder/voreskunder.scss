@@ -1,0 +1,43 @@
+@import "./../../sass/global.scss";
+
+.VoresKunder {
+    width: 100%;
+
+    .textContainer {
+
+        h2 {
+            span {
+                color: $safety-orange-blaze-orange;
+            }
+        }
+    }
+
+    .testimonialCard {
+        background-color: $cultured;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-radius: $ButtonRadius;
+        
+        .cardContent {
+
+            img {
+                margin-top: -25px;
+                border-radius: 50%;
+                border: 3px solid $white;
+            }
+            h2 {
+                color: $spanish-red;
+            }
+
+            h3 {
+                color: $safety-orange-blaze-orange;
+            }
+
+            p {
+                color: $black-shadows;
+            }
+        }
+    }
+}

@@ -55,7 +55,7 @@ const Slider = (props) => {
     slides[slideIndex].style.display = "block";
     //dots[slideIndex-1].className += " active";
 
-    t = setTimeout(() => setSlideIndex(slideIndex + 1), 3000); // nedtæller til ændring af slideIndex (næste image/slide)
+    t = setTimeout(() => setSlideIndex(slideIndex + 1), 4000); // nedtæller til ændring af slideIndex (næste image/slide)
 
     // finally - clean-up-function
     return () => {
@@ -78,8 +78,15 @@ const Slider = (props) => {
              
               <img src={imagePath + s.image} style={{ width: "100%" }} alt="" />
 
-              <div className="text">{Parser(s.caption)}
-                <button className="SliderButton">Kontakt os</button>
+              <div className="containerContent">
+                <div className="text">
+                  <div className="animation">
+
+                  {Parser(s.caption)}
+                  </div>
+                  <button className="SliderButton">Kontakt os</button>
+                </div>
+                
               </div>
 
               

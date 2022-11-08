@@ -44,6 +44,34 @@ export const getOmos = () => {
 
 }
 
+// ---------- SERVICES -------------------------------------------
+// ------------------------------------------------------------
+
+export const getService = () => {
+
+    // GET * http://localhost:5333/service
+
+    let response = axiosBase.get("service");
+    
+    return response;
+
+}
+
+
+// ---------- TESTIMONIAL -------------------------------------------
+// ------------------------------------------------------------
+
+export const getTestimonial = () => {
+
+    // GET * http://localhost:5333/testimonial
+
+    let response = axiosBase.get("testimonial");
+    
+    return response;
+
+}
+
+
 // ---------- TOURS -------------------------------------------
 // ------------------------------------------------------------
 

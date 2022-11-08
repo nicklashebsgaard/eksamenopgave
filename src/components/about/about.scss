@@ -13,15 +13,20 @@
         padding: 1rem 0;
     }
 
-    .buttonLæsMere {
-    background-color: $safety-orange-blaze-orange;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: $ButtonRadius;
-    font-weight: bold;
-    color: $white;
-    margin: 2.5rem 0;
-    cursor: pointer;
-    }
+    .buttonStyle {
+        background-color: $safety-orange-blaze-orange;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        border: none;
+        border-radius: $ButtonRadius;
+        font-weight: bold;
+        color: $white;
+        margin-top: 2rem;
+        cursor: pointer;
+        &:hover {
+          color: $safety-orange-blaze-orange;
+          background-color: transparent;
+          border: 1px solid $safety-orange-blaze-orange;
+        }
+      }
 }

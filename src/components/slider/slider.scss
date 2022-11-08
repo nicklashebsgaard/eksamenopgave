@@ -14,9 +14,16 @@
 
     img {
       width: 100%;
+      height: 600px;
       object-fit: cover;
-      filter: brightness(60%)
+      filter: brightness(60%);
     }
+  }
+
+  .containerContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   /* Next & previous buttons */
@@ -57,8 +64,12 @@
       }
     }
   }
+  
+  .animation {
+    animation: scale-in-hor-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
 
-  .SliderButton  {
+  .SliderButton {
     background-color: $safety-orange-blaze-orange;
     padding: 1rem 2rem;
     text-transform: uppercase;
@@ -68,9 +79,51 @@
     color: $white;
     margin-top: 2rem;
     cursor: pointer;
+	  animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
   }
 
   .SliderButton:hover {
     color: $safety-orange-blaze-orange;
+    background-color: transparent;
+    border: 1px solid $safety-orange-blaze-orange;
   }
+}
+
+/* https://animista.net/ */
+/* ----------- keyfrems ------------- */
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+  
 }
