@@ -1,0 +1,47 @@
+@import "./../../sass/global.scss";
+
+.SidsteNyt {
+    margin: 4rem 0;
+
+  .titleContainer {
+    text-align: center;
+
+    h2 {
+      padding: 4rem 0 1rem 0;
+    }
+    span {
+      color: $safety-orange-blaze-orange;
+    }
+
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .newsCard {
+    border-top-left-radius: $ButtonRadius;
+    border-top-right-radius: $ButtonRadius;
+    width: 310px;
+    margin: 2% 1%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    .imageContainer {
+      img {
+        width: 100%;
+        border-top-left-radius: $ButtonRadius;
+        border-top-right-radius: $ButtonRadius;
+      }
+    }
+
+    .textContainer {
+      padding: 1rem 1rem;
+    }
+  }
+}

@@ -63,6 +63,7 @@ const VoresKunder = () => {
         </p>
 
       </div>
+      
       <Carousel Carousel autoplay="true" wrapAround="true" autoplayInterval="3500">
       <div className="flexContainer">
      

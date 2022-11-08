@@ -53,10 +53,10 @@ const VoresTeam = () => {
 
             {team && team.map(t =>
 
-                <div key={t._id}>
+                <div className="size" key={t._id}>
                     
                     <div className="imageContainer">
-                            <img src={"http://localhost:5333/images/team/" + t.image} alt="" />
+                            <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" />
                         <div className="hoverCard" >
                             {t.name}
                             {t.title}

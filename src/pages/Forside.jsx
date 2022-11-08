@@ -17,6 +17,7 @@ import NeedHelp from "../components/needhelp/NeedHelp";
 import VoresService from "../components/voresservice/VoresService";
 import VoresKunder from "../components/voreskunder/VoresKunder";
 import VoresTeam from "../components/voresteam/VoresTeam";
+import SidsteNyt from "../components/sidstenyt/SidsteNyt";
 
 const Forside = () => {
 
@@ -70,6 +71,7 @@ const Forside = () => {
       <VoresService />
       <VoresKunder />
       <VoresTeam />
+      <SidsteNyt />
   </> 
 
   );
