@@ -19,7 +19,7 @@ const SearchInput = () => {
 
     <form className='SearchInput' onSubmit={handleSearch}>
         <div className="SeachContainer">
-            <input className="inpSearch" type="text" name='inpSearch' placeholder='Søg' />
+            <input className="inpSearch" type="text" name='inpSearch' placeholder='Søg' required />
     
             <button className="searchButton" type='submit'>
                 <span className="material-symbols-outlined search">

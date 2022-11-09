@@ -1,25 +1,69 @@
 @import "./../../../sass/global.scss";
 
 footer {
-    height: auto;
-    background-color: $onyx;
+  background-color: $onyx;
 
-    .footerContent {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        width: 70%;
-        padding: 4rem 0;
-        margin: 0 auto;
-
-        .brandContainer {
-            grid-column: 1/2;
-        }
-
-        .textContainer {
-            grid-column: 1/2;
-            color: $gainsboro;
-        }
+  .footerContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    width: 70%;
+    padding: 4rem 0;
+    margin: 0 auto;
+    color: $gainsboro;
+    
+    h4 {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
     }
 
-   
+    p {
+        line-height: 2rem;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        line-height: 2rem;
+    }
+
+    .listItemContainer li {
+        display: flex;
+        align-items: center;
+    }
+    
+    .expand_more {
+        transform: rotate(270deg);
+    }
+
+    .brandContainer {
+      grid-column: 1/2;
+    }
+
+    .textContainer {
+      grid-column: 1/2;
+    }
+    .linksContainer {
+      grid-column: 2/3;
+    }
+
+    .contactContainer {
+        grid-column: 3/4;
+    }
+
+    .newsLetter {
+        grid-column: 4/-1;
+    }
+
+    .contactContainer {
+        
+        span {
+            font-weight: bold;
+        }
+    }
+  }
+
 }

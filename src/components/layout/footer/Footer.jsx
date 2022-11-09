@@ -46,26 +46,80 @@ const Footer = () => {
   return (
 
     <footer className="Footer">
+
       <div className="footerContent">
-      {error && <ErrorMessage />}
-      {loading && <Loader />}
-      
+        {error && <ErrorMessage />}
+        {loading && <Loader />}
+        
+        <div className="gridContainer">
+        
+        {/* BRAND */}
+        <div className="brandContainer">
+            <Link className="navbarBrand" to="/"> <img src={Brand} alt="" /></Link>
+        </div>
 
-      {/* BRAND */}
-      <div className="brandContainer">
-          <Link className="navbarBrand" to="/"> <img src={Brand} alt="" /></Link>
+        <div className="textContainer">
+          <p>Som medlem af elinstallatørernes
+            Landsorganisation, ELFO, er vi tilsluttet
+            et ankernævn og garantiordning.
+          </p>
+        </div>
+
       </div>
 
-      <div className="textContainer">
-        <p>Som medlem af elinstallatørernes
-          Landsorganisation, ELFO, er vi tilsluttet
-          et ankernævn og garantiordning.
-        </p>
+      <div className="linksContainer">
+        <h4>Link</h4>
+        <ul>
+          <div className="listItemContainer">
+            <li>
+              <span class="material-symbols-outlined expand_more">
+              expand_more
+              </span> FAQ
+            </li>
+          </div>
+          <div className="listItemContainer">
+            <li>
+              <span class="material-symbols-outlined expand_more">
+              expand_more
+              </span> Om os
+            </li>
+          </div>
+          <div className="listItemContainer">
+            <li>
+              <span class="material-symbols-outlined expand_more">
+              expand_more
+              </span> Kontakt os
+            </li>
+          </div>
+          <div className="listItemContainer">
+            <li>
+              <span class="material-symbols-outlined expand_more">
+              expand_more
+              </span> Services
+            </li>
+          </div>
+        </ul>
       </div>
+
+      {
+        contactInfo && (
+          <>
+            <div className="contactContainer">
+              <h4>Kontakt os</h4>
+              <p><span>Adresse:</span> {contactInfo.address}, {contactInfo.zipcity}</p>
+              <p><span>Telefon:</span> {contactInfo.phone}</p>
+              <p><span>Email:</span> {contactInfo.email}</p>
+            </div>
+          </>
+        )
+      }
+      <div className="newsLetter">
+        <h4>Nyhedsbrev</h4>
+        <p>Tilmeld dig vores nyhedsbrev her</p>
 
       </div>
 
-    
+      </div>
     
     </footer>
 
@@ -73,4 +127,4 @@ const Footer = () => {
 
 };
 
-export default Footer
+export default Footer;
