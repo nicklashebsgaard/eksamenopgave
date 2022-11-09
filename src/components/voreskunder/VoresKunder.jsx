@@ -66,25 +66,25 @@ const VoresKunder = () => {
         </p>
         
       </div>
-      <Carousel  wrapAround="true" slidesToShow={3} style={{overflowY : "visible"}}>
+      <Carousel  wrapAround="true" slidesToShow={3} >
      
       {testimonial &&
         randomMixer(testimonial).
         slice(0, 4)
           .map((t) => (
             <div className="flexContainer">
-            <div className="testimonialCard" key={t._id}>
-              <div className="cardContent">
-                <img
-                  src={"http://localhost:5333/images/testimonial/" + t.image}
-                  alt="kunde"
-                  loading="lazy"
-                />
-                <h2>{t.name}</h2>
-                <h3>{t.title}</h3>
-                <p>{t.review}</p>
+              <div className="testimonialCard" key={t._id}>
+                <div className="cardContent">
+                  <img
+                    src={"http://localhost:5333/images/testimonial/" + t.image}
+                    alt="kunde"
+                    loading="lazy"
+                  />
+                  <h2>{t.name}</h2>
+                  <h3>{t.title}</h3>
+                  <p>{t.review}</p>
+                </div>
               </div>
-            </div>
           </div>
           ))}
    

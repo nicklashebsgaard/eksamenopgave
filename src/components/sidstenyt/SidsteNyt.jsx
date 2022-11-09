@@ -7,6 +7,9 @@ import { getNews } from "../../helpers/apikald";
 // React useState, useEffect
 import { useState, useEffect } from "react";
 
+// Link til de andre sider
+import { Link } from "react-router-dom";
+
 // COMPONENTS
 import ErrorMessage from "./../errormessage/ErrorMessage";
 import Loader from "./../loader/Loader";
@@ -82,9 +85,11 @@ const SidsteNyt = () => {
           ))}
 
       </div>
-      
+            
             <div className="buttonContainer">
-              <button className="buttonStyle">FLERE NYHEDER ...</button>
+              <Link to="nyheder">
+                <button className="buttonStyle">FLERE NYHEDER ...</button>
+              </Link>
             </div>
 
     </section>

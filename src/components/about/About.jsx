@@ -4,6 +4,9 @@ import "./about.scss";
 // React useState, useEffect
 import { useState, useEffect } from "react";
 
+// Link til de andre sider
+import { Link } from "react-router-dom";
+
 // API
 import { getOmos } from "./../../helpers/apikald";
 
@@ -53,8 +56,9 @@ const About = () => {
                     <p>{about.teaser}</p>
                 </>
             }
-            
-            <Button>LÆS MERE</Button>
+            <Link to="om-os">
+              <Button>LÆS MERE</Button>
+            </Link>
         </div>
         
     </section>

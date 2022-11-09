@@ -1,8 +1,12 @@
 // SCSS 
 import "./needhelp.scss";
 
-import React from 'react'
+// Link til de andre sider
+import { Link } from "react-router-dom";
+
+// COMPONENTS
 import Button from "../button/Button";
+
 const NeedHelp = () => {
 
   return (
@@ -15,7 +19,9 @@ const NeedHelp = () => {
 
         <p>lorem ipsum dolor sit amet consectetur</p>
 
-        <Button>Kontakt os</Button>
+        <Link to="kontakt">
+          <Button>Kontakt os</Button>
+        </Link>
 
         </div>
      

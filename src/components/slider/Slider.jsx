@@ -7,6 +7,9 @@ import React, { useState, useEffect } from "react";
 // html-react-parser
 import Parser from "html-react-parser";
 
+// Link til de andre sider
+import { Link } from "react-router-dom";
+
 // icons 
 import {SlArrowLeftCircle} from "react-icons/sl";
 import {SlArrowRightCircle} from "react-icons/sl";
@@ -84,7 +87,10 @@ const Slider = (props) => {
 
                   {Parser(s.caption)}
                   </div>
+                <Link to="kontakt">
                   <button className="SliderButton">Kontakt os</button>
+                </Link>
+
                 </div>
                 
               </div>
