@@ -141,7 +141,7 @@ const Footer = () => {
         {contactInfo && contactInfo.some.map (c =>
 
           <div className="icon" key={c._id}>
-            <span>{c.icon}</span>
+            <span className={"fa " + c.icon}></span>
           </div>
          )}
       </div>

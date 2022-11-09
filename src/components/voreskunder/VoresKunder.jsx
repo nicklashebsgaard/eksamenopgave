@@ -49,7 +49,9 @@ const VoresKunder = () => {
   }
 
   return (
+    
     <section className="VoresKunder">
+
       {error && <ErrorMessage />}
       {loading && <Loader />}
 
@@ -64,13 +66,13 @@ const VoresKunder = () => {
         </p>
         
       </div>
-      <Carousel Carousel autoplay="true" wrapAround="true" slidesToShow={1} autoplayInterval="3500">
-      <div className="flexContainer">
+      <Carousel  wrapAround="true" slidesToShow={3} style={{overflowY : "visible"}}>
      
       {testimonial &&
         randomMixer(testimonial).
-        slice(0, 3)
+        slice(0, 4)
           .map((t) => (
+            <div className="flexContainer">
             <div className="testimonialCard" key={t._id}>
               <div className="cardContent">
                 <img
@@ -83,9 +85,9 @@ const VoresKunder = () => {
                 <p>{t.review}</p>
               </div>
             </div>
+          </div>
           ))}
    
-      </div>
       </Carousel>
     </section>
   );
