@@ -1,7 +1,7 @@
 @import "./../../sass/global.scss";
 
 .SidsteNyt {
-    margin: 4rem 0;
+  margin: 4rem 0;
 
   .titleContainer {
     text-align: center;
@@ -47,7 +47,7 @@
         padding-bottom: 1rem;
       }
 
-      p{
+      p {
         color: $sonic-silver;
       }
     }
@@ -57,7 +57,7 @@
     display: flex;
     justify-content: center;
   }
-  .buttonStyle{
+  .buttonStyle {
     background-color: $safety-orange-blaze-orange;
     padding: 1rem 2rem;
     text-transform: uppercase;
@@ -69,10 +69,23 @@
     cursor: pointer;
 
     &:hover {
-        color: $safety-orange-blaze-orange;
-        background-color: transparent;
-        border: 1px solid $safety-orange-blaze-orange;
-      }
+      color: $safety-orange-blaze-orange;
+      background-color: transparent;
+      border: 1px solid $safety-orange-blaze-orange;
+    }
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .SidsteNyt {
+    .newsCard {
+      width: 90%;
+    }
+    .buttonContainer {
+      padding-top: 2rem;
     }
 
+  }
 }

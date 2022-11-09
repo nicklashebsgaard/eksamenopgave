@@ -8,15 +8,17 @@ $sonic-silver: #777777ff;
 $gainsboro: #d4dae3ff;
 $platinum: #e5e5e5ff;
 $cultured: #f8f8faff;
-$safety-orange-blaze-orange: #FF6600ff;
-$black-shadows: #B7A4AAff;
+$safety-orange-blaze-orange: #ff6600ff;
+$black-shadows: #b7a4aaff;
 $blackis: #000;
 $white: #fff;
-$spanish-red: #E80426ff;
+$spanish-red: #e80426ff;
 
-// Fonts
+// Fonts icons
 $Fonts-use: "Flaticon";
-.App {
+$Font-fa: "FontAwesome";
+
+.VoresService {
   font-family: $Fonts-use, Arial, Helvetica, sans-serif;
 }
 
@@ -24,6 +26,20 @@ $Fonts-use: "Flaticon";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../../Fonts/fontawesome-webfont.eot");
+  src: url("../../../Fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
+      format("embedded-opentype"),
+    url("../../../Fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+    url("../../../Fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+    url("../../../Fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+    url("../../../Fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+}
 
 // Til at placer i midden
 @mixin flexCenter {

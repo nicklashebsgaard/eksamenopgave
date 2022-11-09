@@ -129,12 +129,15 @@ const Footer = () => {
 
       </div>
 
-      
-      <div className="copyRight">
-        <p><span>Strøm</span> &copy; 2017 All Right Reserved</p>
-      </div>
 
-      <div className="iconContainer">
+      <hr />
+
+      <div className="flexContainer">
+        <div className="copyRight">
+          <p><span>Strøm</span> &copy; 2017 All Right Reserved</p>
+        </div>
+
+        <div className="iconContainer">
         {contactInfo && contactInfo.some.map (c =>
 
           <div className="icon" key={c._id}>
@@ -142,6 +145,9 @@ const Footer = () => {
           </div>
          )}
       </div>
+
+      </div>
+      
     
     </footer>
 

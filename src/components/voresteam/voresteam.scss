@@ -16,10 +16,9 @@
     p {
       padding-bottom: 2rem;
     }
-    
   }
 
-  .size {
+  .teamContainer {
     width: 250px;
   }
 
@@ -63,7 +62,7 @@
       width: 100%;
       z-index: 3;
       background-color: $safety-orange-blaze-orange;
-      clip-path:  polygon(53% 55%, 100% 45%, 100% 100%, 0 100%, 0 41%);
+      clip-path: polygon(53% 55%, 100% 45%, 100% 100%, 0 100%, 0 41%);
       transition: all 1s ease-in;
     }
 
@@ -72,5 +71,18 @@
       height: auto;
     }
   }
-  
+}
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .VoresTeam {
+    .teamContainer{
+      width: 90%;
+    }
+
+    .imageContainer img {
+      width: 100%;
+    }
+  }
 }

@@ -28,6 +28,11 @@ footer {
 
     li {
       line-height: 2rem;
+
+      &:hover {
+        color: $safety-orange-blaze-orange;
+        cursor: pointer;
+      }
     }
 
     .listItemContainer li {
@@ -100,23 +105,29 @@ footer {
     }
   }
 
-  .copyRight {
+  .flexContainer {
     width: 70%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
 
-    p {
+    .copyRight {
+      p {
         color: $gainsboro;
 
         span {
-            color: $safety-orange-blaze-orange;
+          color: $safety-orange-blaze-orange;
         }
+      }
     }
-  }
 
-  .iconContainer {
-
-    .icon {
-        
+    .iconContainer {
+      display: flex;
+      /* .icon {
+        span {
+        }
+      } */
     }
   }
 }
