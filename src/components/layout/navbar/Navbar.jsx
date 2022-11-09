@@ -37,22 +37,27 @@ const Navbar = () => {
           
           <li className="menuItem">
             {/* End tilføjet for at ungå at hom har active konstant */}
-          <NavLink to="/" end>Forside</NavLink> 
+            <NavLink to="/" end>Forside</NavLink> 
           </li>
+
           <li className="menuItem">
-          <NavLink to="om-os">Om os</NavLink> 
+            <NavLink to="om-os">Om os</NavLink> 
           </li>
+
           <li className="menuItem">
-          <NavLink to="service">Service</NavLink> 
+            <NavLink to="service">Service</NavLink> 
           </li>
+
           <li className="menuItem">
-          <NavLink to="faq">FAQ</NavLink> 
+            <NavLink to="faq">FAQ</NavLink> 
           </li>
+
           <li className="menuItem">
-          <NavLink to="nyheder">Nyheder</NavLink> 
+            <NavLink to="nyheder">Nyheder</NavLink> 
           </li>
+
           <li className="menuItem">
-          <NavLink to="kontakt">Kontakt os</NavLink> 
+            <NavLink to="kontakt">Kontakt os</NavLink> 
           </li>
 
           {/* {
@@ -76,11 +81,9 @@ const Navbar = () => {
             </>
           } */}
 
-          <div className="searchContainer">
-            <li>
+            <li className="searchContainer">
               <SearchInput />
             </li>
-          </div>
           
         </ul>
       </div>
