@@ -1,7 +1,44 @@
 @import "./../sass/global.scss";
 
 .Omos {
-    width: 80%;
+    margin-top: -35px;
+    
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 15%;
+    background-color: $platinum;
+    .titleText {
+    }
+
+    .breadcrumbContainer {
+      ul.breadcrumb {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+      ul.breadcrumb li {
+        display: inline;
+        font-size: 1rem;
+      }
+
+      span {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .wrapper {
+    width: 70%;
     margin: 0 auto;
-  
+  }
+  .contentContainer {
+    padding: 4rem 5%;
+    text-align: center;
+  }
+
+  h2 {
+    padding: 1rem 0;
+  }
 }

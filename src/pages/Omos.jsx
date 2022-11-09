@@ -12,6 +12,9 @@ import { getOmos } from "../helpers/apikald";
 // COMPONENTS
 import ErrorMessage from "../components/errormessage/ErrorMessage";
 import Loader from "../components/loader/Loader";
+import About from "../components/about/About";
+import VoresKunder from "../components/voreskunder/VoresKunder";
+import VoresTeam from "../components/voresteam/VoresTeam";
 
 const Omos  = () => {
 
@@ -41,12 +44,41 @@ const Omos  = () => {
 
   return (
 
+    <>
+
     <section className="Omos">
 
       {error && <ErrorMessage />}
       {loading && <Loader />}
       
-      <h1>Om os</h1>
+      <div className="flexContainer">
+
+        <div className="titleText">
+          <h1>Om os</h1>
+        </div>
+
+        <div className="breadcrumbContainer">
+          <ul class="breadcrumb">
+            <li>Forsiden</li>
+            <span className="material-symbols-outlined expand_more">
+              expand_more
+            </span>
+            <li>Om os</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div className="wrapper">
+      <div className="contentContainer">
+            {
+                omOs && 
+                <>
+                    <h2>{omOs.title}</h2>
+                    <p>{omOs.teaser}</p>
+                </>
+            }
+      </div>
 
       {
         omOs && 
@@ -57,12 +89,15 @@ const Omos  = () => {
         </>
         
       }
-      
-    
-    
-    
-    
+      </div>
+
     </section>
+
+    <VoresKunder />
+
+    <VoresTeam />
+
+    </>
 
   );
 
