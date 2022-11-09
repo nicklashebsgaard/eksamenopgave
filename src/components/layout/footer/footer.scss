@@ -124,10 +124,20 @@ footer {
 
     .iconContainer {
       display: flex;
-      /* .icon {
+      text-align: center;
+      .icon {
+        height: 3rem;
+        width: 3rem;
+        border: solid 1px lightgray;
+        border-radius: 50%;
+        margin: 0 .2rem;
+        cursor: pointer;
+        
         span {
+          padding-top: 25%;
+          color: $white;
         }
-      } */
+      }
     }
   }
 }
