@@ -1,33 +1,41 @@
 @import "./../../sass/global.scss";
 
 .About {
-    width: 70%;
-    margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
 
-    .contentContainer {
-        padding: 4rem 5%;
-        text-align: center;
-    }
+  .contentContainer {
+    padding: 4rem 5%;
+    text-align: center;
+  }
 
-    h2 {
-        padding: 1rem 0;
-    }
+  h2 {
+    padding: 1rem 0;
+  }
 
-    .buttonStyle {
-      background-color: $safety-orange-blaze-orange;
-      padding: 1rem 2rem;
-      text-transform: uppercase;
-      border: none;
-      border-radius: $ButtonRadius;
+  .buttonStyle {
+    background-color: $safety-orange-blaze-orange;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: $ButtonRadius;
+    border: 1px solid $safety-orange-blaze-orange;
+    font-weight: bold;
+    color: $white;
+    margin-top: 2rem;
+    cursor: pointer;
+    &:hover {
+      color: $safety-orange-blaze-orange;
+      background-color: transparent;
       border: 1px solid $safety-orange-blaze-orange;
-      font-weight: bold;
-      color: $white;
-      margin-top: 2rem;
-      cursor: pointer;
-      &:hover {
-        color: $safety-orange-blaze-orange;
-        background-color: transparent;
-        border: 1px solid $safety-orange-blaze-orange;
-      }
     }
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .About {
+    width: 90%;
+  }
 }

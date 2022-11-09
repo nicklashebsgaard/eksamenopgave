@@ -38,3 +38,12 @@
     }
   }
 }
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .NeedHelp {
+    padding: 0;
+  }
+}
+

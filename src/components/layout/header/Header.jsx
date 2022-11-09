@@ -69,16 +69,22 @@ const Header = () => {
               <>
 
                 <div className="infoContainer">
+                  
+                  <div className="infoContent">
+                    <MdPlace style={{color: '#ff6600ff'}}/>
+                    <p>{contactInfo.address}, </p>
+                    <p>{contactInfo.zipcity}</p>
+                  </div>
 
-                  <MdPlace style={{color: '#ff6600ff'}}/>
-                  <p>{contactInfo.address}, </p>
-                  <p>{contactInfo.zipcity}</p>
+                  <div className="infoContent">
+                    <BiTime style={{color: '#ff6600ff'}}/>
+                    <p>{contactInfo.openinghours}</p>
+                  </div>
 
-                  <BiTime style={{color: '#ff6600ff'}}/>
-                  <p>{contactInfo.openinghours}</p>
-
-                  <FaPhoneAlt style={{color: '#ff6600ff'}}/>
-                  <p>{contactInfo.phone}</p>
+                  <div className="infoContent">
+                    <FaPhoneAlt style={{color: '#ff6600ff'}}/>
+                    <p>{contactInfo.phone}</p>
+                  </div>
                 </div>
               
               </>

@@ -1,8 +1,8 @@
 @import "./../../sass/global.scss";
 
 .BookNow {
-    box-shadow: 0px 2px 4px;
-    padding: .5rem;
+  box-shadow: 0px 2px 4px;
+  padding: 0.5rem;
   .wrapper {
     background-color: $white;
     display: flex;
@@ -38,9 +38,8 @@
       text-indent: 10px;
     }
   }
-   
 
-  .buttonStyle{
+  .buttonStyle {
     background-color: $safety-orange-blaze-orange;
     padding: 1rem 2rem;
     text-transform: uppercase;
@@ -52,9 +51,33 @@
     cursor: pointer;
 
     &:hover {
-        color: $safety-orange-blaze-orange;
-        background-color: transparent;
-        border: 1px solid $safety-orange-blaze-orange;
-      }
+      color: $safety-orange-blaze-orange;
+      background-color: transparent;
+      border: 1px solid $safety-orange-blaze-orange;
     }
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* PHONE */
+@include mobile {
+  .BookNow {
+    .wrapper{
+      display: block;
+      margin: 0;
+    }
+
+    .titleText {
+      padding-left: 1rem;
+    }
+
+    .inputContainer {
+      padding: 1rem 0;
+    }
+
+    .buttonStyle {
+      margin-left: 1rem;
+    }
+   
+  }
 }

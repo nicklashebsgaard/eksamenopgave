@@ -2,9 +2,8 @@
 
 .Header {
   background-color: $onyx;
-  padding: .5rem;
-  height: 120px;
-  
+  padding: 2rem 0;
+
   .contentContainer {
     display: flex;
     justify-content: space-between;
@@ -25,14 +24,57 @@
     display: flex;
     flex-wrap: wrap;
 
-    p{
-        padding: 0 5px;
+    .infoContent {
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
     }
-    p:nth-child(3){
-        margin-right: 2rem;
+
+    p {
+      padding: 0 5px;
     }
-    p:nth-child(5){
-        margin-right: 2rem;
+    
+  }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+  .Header {
+    height: 180px;
+    .infoContent {
+      margin: 0;
+      padding-top: .5rem;
     }
   }
 }
+
+
+/* PHONE */
+@include mobile {
+  .Header {
+    height: 250px;
+    padding: 1rem;
+    .contentContainer {
+      width: 50%;
+      text-align: center;
+      display: block;
+    }
+    .contaktInfomationBox {
+
+      .infoContainer {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .infoContent {
+          margin: 0;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
