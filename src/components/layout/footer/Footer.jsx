@@ -71,34 +71,34 @@ const Footer = () => {
       <div className="linksContainer">
         <h4>Link</h4>
         <ul>
-          <div className="listItemContainer">
-            <li>
-              <span className="material-symbols-outlined expand_more">
-              expand_more
-              </span> FAQ
+          <li>
+              <Link to="faq">
+                <span className="material-symbols-outlined expand_more">
+                expand_more
+                </span> FAQ
+              </Link>
             </li>
-          </div>
-          <div className="listItemContainer">
             <li>
-              <span className="material-symbols-outlined expand_more">
-              expand_more
-              </span> Om os
+              <Link to="om-os">
+                <span className="material-symbols-outlined expand_more">
+                expand_more
+                </span> Om os
+              </Link>
             </li>
-          </div>
-          <div className="listItemContainer">
             <li>
-              <span className="material-symbols-outlined expand_more">
-              expand_more
-              </span> Kontakt os
+              <Link to="kontakt">
+                <span className="material-symbols-outlined expand_more">
+                expand_more
+                </span> Kontakt os
+              </Link>
             </li>
-          </div>
-          <div className="listItemContainer">
             <li>
-              <span className="material-symbols-outlined expand_more">
-              expand_more
-              </span> Services
+              <Link to="service">
+                <span className="material-symbols-outlined expand_more">
+                expand_more
+                </span> Services
+              </Link>
             </li>
-          </div>
         </ul>
       </div>
 
