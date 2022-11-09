@@ -125,6 +125,11 @@
 
 /* ------------------- breakpoints ------------------- */
 /* DESKTOP */
-@include desktop {
-  
+@include mobile {
+  .Slider {
+    .prev,
+  .next {
+    font-size: 2.5rem;
+  }
+  }
 }

@@ -4,6 +4,8 @@ import "./omos.scss";
 // React useState, useEffect
 import { useState, useEffect } from "react";
 
+import Parser from "html-react-parser";
+
 // API 
 import { getOmos } from "../helpers/apikald";
 
@@ -50,7 +52,7 @@ const Omos  = () => {
         omOs && 
 
         <>
-          <article>{omOs.content}</article>
+          <article>{Parser(omOs.content)}</article>
         
         </>
         
