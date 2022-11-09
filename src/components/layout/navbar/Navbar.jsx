@@ -32,6 +32,7 @@ const Navbar = () => {
       </div>
     
       <div className={showMenu === true ? "navbar-container active" : "navbar-container"}>
+      {/* <div className="navbar-container active"> */}
         <ul>
           
           <li className="menuItem">

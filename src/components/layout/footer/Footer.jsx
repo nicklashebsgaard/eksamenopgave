@@ -47,9 +47,10 @@ const Footer = () => {
 
     <footer className="Footer">
 
-      <div className="footerContent">
         {error && <ErrorMessage />}
         {loading && <Loader />}
+
+      <div className="footerContent">
         
         <div className="gridContainer">
         
@@ -72,28 +73,28 @@ const Footer = () => {
         <ul>
           <div className="listItemContainer">
             <li>
-              <span class="material-symbols-outlined expand_more">
+              <span className="material-symbols-outlined expand_more">
               expand_more
               </span> FAQ
             </li>
           </div>
           <div className="listItemContainer">
             <li>
-              <span class="material-symbols-outlined expand_more">
+              <span className="material-symbols-outlined expand_more">
               expand_more
               </span> Om os
             </li>
           </div>
           <div className="listItemContainer">
             <li>
-              <span class="material-symbols-outlined expand_more">
+              <span className="material-symbols-outlined expand_more">
               expand_more
               </span> Kontakt os
             </li>
           </div>
           <div className="listItemContainer">
             <li>
-              <span class="material-symbols-outlined expand_more">
+              <span className="material-symbols-outlined expand_more">
               expand_more
               </span> Services
             </li>
@@ -117,8 +118,29 @@ const Footer = () => {
         <h4>Nyhedsbrev</h4>
         <p>Tilmeld dig vores nyhedsbrev her</p>
 
+        <form>
+          <div className="inputContainer">
+            <input type="email" placeholder="Din Email" required/>
+          </div>
+
+          <button className="buttonStyle" type="submit">tilmeld</button>
+        </form>
       </div>
 
+      </div>
+
+      
+      <div className="copyRight">
+        <p><span>Strøm</span> &copy; 2017 All Right Reserved</p>
+      </div>
+
+      <div className="iconContainer">
+        {contactInfo && contactInfo.some.map (c =>
+
+          <div className="icon" key={c._id}>
+            <span>{c.icon}</span>
+          </div>
+         )}
       </div>
     
     </footer>

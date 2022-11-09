@@ -1,6 +1,5 @@
 // SCSS
 import "./voresservice.scss";
-import React from 'react'
 
 // Icons
 import {BsCircle} from "react-icons/bs";

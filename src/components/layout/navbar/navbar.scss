@@ -98,7 +98,8 @@
       overflow: hidden;
 
       &.active {
-        height: 600px;
+        height: 380px;
+        background-color: $onyx;
       }
     }
 
