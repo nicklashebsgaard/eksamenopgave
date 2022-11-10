@@ -52,7 +52,7 @@ const VoresTeam = () => {
 
         <div className="contentContainer">
 
-            {team && team.map(t =>
+            {team && team.map((t) =>
 
                 <div className="teamContainer" key={t._id}>
                     

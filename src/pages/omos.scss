@@ -32,13 +32,111 @@
   .wrapper {
     width: 70%;
     margin: 0 auto;
+    padding-bottom: 4rem;
   }
+  
   .contentContainer {
-    padding: 4rem 5%;
+    padding: 4rem 0;
     text-align: center;
   }
 
   h2 {
     padding: 1rem 0;
   }
+
+  .mainContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    .textContainer {
+
+      strong {
+        color: $blackis;
+        font-size: 1.5rem;
+      }
+
+      p {
+        padding-bottom: 2rem;
+        color: $dim-gray;
+      }
+      ul {
+        padding-left: 1rem;
+        color: $dim-gray;
+        line-height: 2rem;
+      }
+
+    }
+     
+    .buttonStyle{
+      background-color: $safety-orange-blaze-orange;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      border: none;
+      border-radius: $ButtonRadius;
+      font-weight: bold;
+      color: $white;
+      margin-top: 2rem;
+      cursor: pointer;
+  
+      &:hover {
+          color: $safety-orange-blaze-orange;
+          background-color: transparent;
+          border: 1px solid $safety-orange-blaze-orange;
+        }
+      }
+    .imageContainer {
+
+      img {
+        border-radius: .5rem;
+        width: 100%;
+      }
+    }
+  }
 }
+
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+
+  .Omos {
+
+    .flexContainer {
+      padding: 4rem 5%;
+    }
+
+    .wrapper {
+      width: 90%;
+
+      .mainContainer {
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+/* TABLET */
+@include tablet {
+
+  .Omos {
+
+    .wrapper {
+      .mainContainer {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+/* PHONE */
+@include mobile {
+  .Omos {
+
+    .mainContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+

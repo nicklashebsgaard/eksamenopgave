@@ -1,0 +1,39 @@
+@import "./../../sass/global.scss";
+
+.Accordion {
+  width: 70%;
+  margin: 0 auto;
+
+  .accordionTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: $safety-orange-blaze-orange;
+  }
+
+  .accordionTitle:hover {
+    background-color: #d7d7d7;
+  }
+
+  .accordionTitle,
+  .accordionContent {
+    padding: 1rem;
+  }
+
+  .accordionContent {
+    background-color: $white;
+    border: 1px solid $gainsboro;
+    border-bottom-left-radius: $ButtonRadius;
+    border-bottom-right-radius: $ButtonRadius;
+    p{
+      color: $gainsboro;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Accordion {
+    width: 90%;
+  }
+}

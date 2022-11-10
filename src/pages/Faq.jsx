@@ -5,6 +5,8 @@ import "./faq.scss";
 import React, { useState, useEffect } from "react";
 
 // COMPONENTS
+import Accordion from "../components/accordion/Accordion";
+
 const Faq = () => {
 
   return (
@@ -13,7 +15,7 @@ const Faq = () => {
         
         <h1>Faq</h1>
     
-    
+      <Accordion />
     
     </section>
 
