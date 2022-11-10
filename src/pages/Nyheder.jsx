@@ -39,12 +39,6 @@ const Nyheder = () => {
       });
   }, []);
 
-  const klipTekst = (txt, minAntalKarakterer) => {
-    txt = txt.replace(/<\/?[^>]+(>|$)/g, ""); // fjern alle html-tags med regex (regular expressions)
-    txt = txt.substring(0, txt.indexOf(" ", minAntalKarakterer)); // udtræk den bid af teksten fra plads 0 til "maxAntalKarakterer" men ved et mellemrum
-    return txt; // returner resultatet
-  };
-
   return (
 
     <section className="Nyheder">
@@ -96,7 +90,7 @@ const Nyheder = () => {
 
                   <div className="textContainer">
                     <h3>{n.title}</h3>
-                    <p>{klipTekst(n.content, 100)}...</p>
+                    <p>{n.content.slice(0, 100)}...</p>
                   </div>
                 </div>
 
