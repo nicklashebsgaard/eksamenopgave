@@ -123,6 +123,19 @@ export const getVoresService = () => {
 
 }
 
+// ---------- SERVICE -------------------------------------------
+// ------------------------------------------------------------
+
+export const getVoresServiceID = (ID) => {
+
+    // GET * http://localhost:5333/service/xxxxxxxxxx
+
+    let response = axiosBase.get("service/" + ID);
+    
+    return response;
+
+}
+
 
 // ---------- BOOKING -------------------------------------------
 // ------------------------------------------------------------

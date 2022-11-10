@@ -1,7 +1,7 @@
 @import "./../sass/global.scss";
 
 .Service {
-    margin-top: -35px;
+  margin-top: -35px;
 
   .flexContainer {
     display: flex;
@@ -9,7 +9,7 @@
     align-items: center;
     padding: 4rem 15%;
     background-color: $platinum;
-    
+
     .breadcrumbContainer {
       ul.breadcrumb {
         list-style: none;
@@ -32,6 +32,18 @@
     grid-template-columns: 1fr 2fr;
     width: 70%;
     margin: 0 auto;
-    padding-bottom: 4rem;
+    padding: 4rem 0;
+
+    .serviceCard {
+      grid-column: 2/-1;
+
+      .imageContainer {
+        img {
+          border-radius: 1rem;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }

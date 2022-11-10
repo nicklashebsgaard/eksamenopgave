@@ -10,8 +10,11 @@ import { getVoresService } from "../helpers/apikald";
 // COMPONENTS
 import ErrorMessage from "../components/errormessage/ErrorMessage";
 import Loader from "../components/loader/Loader";
+import ServiceId from "../components/serviceid/ServiceId";
 
 const Service = () => {
+
+  const [ServiceDataId, setServiceDataId] = useState();
 
   const [service, setService] = useState();
   const [loading, setLoading] = useState(false);
@@ -64,16 +67,17 @@ const Service = () => {
 
       <div className="wrapper">
 
-      {service && service.slice(0,1).map((s, i) =>
 
-        <div className="card" key={"service" + i}>
-
-          <div className="imageContainer">
-            <img src={"http://localhost:5333/images/service/" + s.image} alt="" />
-          </div>       
-
+      {
+        service && service.map((s, i) =>
+        <div className="serviceList" key={"servicelist" + i}>
+          <button onClick={() => setServiceDataId(s._id)}>
+            {s.title}
+          </button>
         </div>
       )}
+
+      <ServiceId data={ServiceDataId} />
 
       </div>
         
