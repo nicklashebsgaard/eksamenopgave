@@ -71,9 +71,9 @@ const VoresKunder = () => {
       {testimonial &&
         randomMixer(testimonial).
         slice(0, 4)
-          .map((t) => (
-            <div className="flexContainer">
-              <div className="testimonialCard" key={t._id}>
+          .map((t, i) => (
+            <div className="flexContainer" key={"kunde" + i}>
+              <div className="testimonialCard" >
                 <div className="cardContent">
                   <img
                     src={"http://localhost:5333/images/testimonial/" + t.image}

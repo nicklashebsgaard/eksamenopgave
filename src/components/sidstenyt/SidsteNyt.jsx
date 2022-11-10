@@ -65,7 +65,10 @@ const SidsteNyt = () => {
         {nyheder &&
           nyheder.slice(0, 3).map((n) => (
             <div className="newsCard" key={n._id}>
-              {/* {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})} */}
+
+              <div className="dateContainer">
+                {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})}
+              </div>
 
               <div className="imageContainer">
                 <img

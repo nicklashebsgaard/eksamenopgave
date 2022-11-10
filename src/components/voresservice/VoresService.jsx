@@ -67,8 +67,8 @@ const VoresService = () => {
         <div className="subGrid">
 
         {service &&
-          service.map((s) => (
-            <div className="contentContainer">
+          service.map((s, i) => (
+            <div className="contentContainer" key={"services" + i}>
               <span className={s.icon}></span>
               <div className="subTitle">
                 <h2>{s.title}</h2>

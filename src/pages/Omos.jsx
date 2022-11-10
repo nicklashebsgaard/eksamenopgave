@@ -65,7 +65,7 @@ const Omos  = () => {
         </div>
 
         <div className="breadcrumbContainer">
-          <ul class="breadcrumb">
+          <ul className="breadcrumb">
             <li>Forsiden</li>
             <span className="material-symbols-outlined expand_more">
               expand_more

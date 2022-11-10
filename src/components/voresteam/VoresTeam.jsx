@@ -52,9 +52,9 @@ const VoresTeam = () => {
 
         <div className="contentContainer">
 
-            {team && team.map((t) =>
+            {team && team.map((t, i) =>
 
-                <div className="teamContainer" key={t._id}>
+                <div className="teamContainer" key={"team" + i}>
                     
                     <div className="imageContainer">
                             <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" loading="lazy" />
