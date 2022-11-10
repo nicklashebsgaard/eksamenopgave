@@ -110,11 +110,25 @@ export const getFaq = () => {
 
 }
 
+// ---------- SERVICE -------------------------------------------
+// ------------------------------------------------------------
+
+export const getVoresService = () => {
+
+    // GET * http://localhost:5333/service
+
+    let response = axiosBase.get("service");
+    
+    return response;
+
+}
+
+
 // ---------- BOOKING -------------------------------------------
 // ------------------------------------------------------------
 // POST - Book service
 
-export const getBook = (book) => {
+export const postBook = (book) => {
 
     // POST * http://localhost:5333/booking
 

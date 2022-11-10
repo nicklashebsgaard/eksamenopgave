@@ -4,8 +4,14 @@ import "./nyheder.scss";
 // React useState, useEffect
 import { useState, useEffect } from "react";
 
+// LINK
+import { Link } from "react-router-dom";
+
 // API
 import { getNews } from "../helpers/apikald";
+
+// ICON
+import {MdDateRange} from "react-icons/md"
 
 // COMPONENTS
 import ErrorMessage from "../components/errormessage/ErrorMessage";
@@ -54,11 +60,15 @@ const Nyheder = () => {
 
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
+            
             <li>Forsiden</li>
+
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
+
             <li>Nyheder</li>
+
           </ul>
         </div>
       </div>
@@ -103,6 +113,7 @@ const Nyheder = () => {
           </div>
 
         )}
+
             <div className="paginationContainer">
                       {nyheder && 
                             <>
@@ -126,20 +137,14 @@ const Nyheder = () => {
             </div>
           
             <div className="arkivContainer">
+
+              <h3>Arkiv</h3>
+
               {nyheder && nyheder.map((n,i) => 
 
-                <div className="card" key={"arkiv" + i}>
-                  <div className="newsCard" key={n._id}>
-                  <div className="dateContainer">
-                    <div className="dateText">
-                      {new Date(n.received).toLocaleDateString("da", {
-                        day: "numeric",
-                        month: "short",
-                      })}
-                    </div>
-                  </div>
+                <div className="cardArkiv" key={"arkiv" + i}>
 
-                  <div className="imageContainer">
+                  <div className="imageContainerArkiv">
                     <img
                       src={"http://localhost:5333/images/news/" + n.image}
                       alt="News"
@@ -147,11 +152,25 @@ const Nyheder = () => {
                     />
                   </div>
 
-                  <div className="textContainer">
-                    <h3>{n.title}</h3>
-                    <p>{n.content.slice(0, 100)}...</p>
+                  <div className="titleDateContainer">
+
+                    <div className="titleContainerArkiv">
+                      <h3>{n.title}</h3>
+                    </div>
+
+                    <div className="dateIconContainerArkiv">
+                      <div className="iconContainer">
+                      <MdDateRange />
+                      </div>
+                      {new Date(n.received).toLocaleDateString("da", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric"
+                      })}
+                    </div>
+
                   </div>
-                </div>
+
                 </div>
                 
               ).reverse().slice(4,8)}
