@@ -35,59 +35,66 @@
     padding-bottom: 4rem;
 
     .cardContainer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 4rem 0;
+    }
+
+    .newsCard {
+      position: relative;
+      border-top-left-radius: $ButtonRadius;
+      border-top-right-radius: $ButtonRadius;
+      width: 310px;
+      margin: 2% 1%;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      .imageContainer {
+        img {
+          width: 100%;
+          border-top-left-radius: $ButtonRadius;
+          border-top-right-radius: $ButtonRadius;
+        }
+      }
+
+      .dateContainer {
+        position: absolute;
+        clip-path: polygon(50% 64%, 100% 80%, 100% 0, 0 0, 0 79%);
+        background-color: $safety-orange-blaze-orange;
+        padding: 0.5rem 0.3rem 0 0.3rem;
+        width: min-content;
+        height: 6rem;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1;
+      }
+      .dateText {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        text-align: center;
         flex-direction: row;
         flex-wrap: wrap;
+        color: $white;
       }
-    
-      .newsCard {
-        position: relative;
-        border-top-left-radius: $ButtonRadius;
-        border-top-right-radius: $ButtonRadius;
-        width: 310px;
-        margin: 2% 1%;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        .imageContainer {
-          img {
-            width: 100%;
-            border-top-left-radius: $ButtonRadius;
-            border-top-right-radius: $ButtonRadius;
-          }
+
+      .textContainer {
+        padding: 1rem 1rem;
+
+        h3 {
+          padding-bottom: 1rem;
         }
-    
-        .dateContainer {
-          position: absolute;
-          clip-path: polygon(50% 64%, 100% 80%, 100% 0, 0 0, 0 79%);
-          background-color: $safety-orange-blaze-orange;
-          padding: .5rem .3rem 0 .3rem;
-          width: min-content;
-          height: 6rem;
-          top: 1rem;
-          left: 1rem;
-          z-index: 1;
-        }
-        .dateText {
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          flex-direction: row;
-          flex-wrap: wrap;
-          color: $white;
-        }
-    
-        .textContainer {
-          padding: 1rem 1rem;
-    
-          h3 {
-            padding-bottom: 1rem;
-          }
-    
-          p {
-            color: $sonic-silver;
-          }
+
+        p {
+          color: $sonic-silver;
         }
       }
+    }
+
+    .paginationContainer {
+      display: flex;
+      flex-direction: column;
+      align-self: end;
+    }
   }
 }

@@ -68,7 +68,7 @@ const SidsteNyt = () => {
 
               <div className="dateContainer">
                 <div className="dateText">
-                  {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})}
+                  {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "short"})}
                 </div>
               </div>
 

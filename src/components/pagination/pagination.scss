@@ -1,3 +1,5 @@
+@import "./../../sass/global.scss";
+
 .Pagination {
   .buttonsContainer {
     display: flex;
@@ -10,23 +12,21 @@
   }
 
   button {
+    border-radius: $ButtonRadius;
+    background-color: $white;
+    border-color: $gainsboro;
     cursor: pointer;
-    margin: 2px;
+    margin: 0 3px;
+    padding: 0.5rem 1rem;
   }
 
   #numberOfPages {
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem 0.6rem;
   }
 
   .paginationActive {
-    border: 2px solid #0c1729;
-    color: #0c1729;
-  }
-
-  .navigate_before,
-  .navigate_next {
-    color: rgb(134, 131, 131);
-    float: left;
-    padding: 0.2rem 0.4rem;
+    border: 2px solid $safety-orange-blaze-orange;
+    color: $white;
+    background-color: $safety-orange-blaze-orange;
   }
 }

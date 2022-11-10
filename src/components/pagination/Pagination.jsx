@@ -21,9 +21,7 @@ const Pagination = (props) => {
     {/* PAGINATION */}
     <div className="buttonsContainer">
         <button disabled={currentPage <= 0} onClick={() => setCurrentPage( currentPage - 1)}>
-            <span className="material-symbols-outlined navigate_before">
-                navigate_before
-            </span>
+            prev
         </button>
 
             {
@@ -33,9 +31,7 @@ const Pagination = (props) => {
             }
         
         <button disabled={currentPage >= nubmerOfPages -1} onClick={() => setCurrentPage( currentPage + 1)}>
-            <span className="material-symbols-outlined navigate_next">
-                navigate_next
-            </span>
+            next
         </button>
         </div>
     {/* PAGINATION  SLUT */}
