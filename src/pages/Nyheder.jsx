@@ -14,6 +14,7 @@ import Pagination from "../components/pagination/Pagination";
 import AmountPerPage from "../components/pagination/amountperpage/AmountPerPage";
 
 const Nyheder = () => {
+
   const [nyheder, setNyheder] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -66,9 +67,11 @@ const Nyheder = () => {
 
         {nyheder && (
 
+          
+
           <div className="cardContainer">
 
-            {nyheder.slice(currentPage * itemsPerPage,currentPage * itemsPerPage + itemsPerPage).map((n) => (
+            {nyheder.map((n) => (
 
                 <div className="newsCard" key={n._id}>
                   <div className="dateContainer">
@@ -94,7 +97,7 @@ const Nyheder = () => {
                   </div>
                 </div>
 
-              ))}
+              )).reverse().slice(currentPage * itemsPerPage,currentPage * itemsPerPage + itemsPerPage)}
 
 
           </div>
@@ -120,6 +123,38 @@ const Nyheder = () => {
                 </>
                       }
 
+            </div>
+          
+            <div className="arkivContainer">
+              {nyheder && nyheder.map((n,i) => 
+
+                <div className="card" key={"arkiv" + i}>
+                  <div className="newsCard" key={n._id}>
+                  <div className="dateContainer">
+                    <div className="dateText">
+                      {new Date(n.received).toLocaleDateString("da", {
+                        day: "numeric",
+                        month: "short",
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="imageContainer">
+                    <img
+                      src={"http://localhost:5333/images/news/" + n.image}
+                      alt="News"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="textContainer">
+                    <h3>{n.title}</h3>
+                    <p>{n.content.slice(0, 100)}...</p>
+                  </div>
+                </div>
+                </div>
+                
+              ).reverse().slice(4,8)}
             </div>
 
       </div>

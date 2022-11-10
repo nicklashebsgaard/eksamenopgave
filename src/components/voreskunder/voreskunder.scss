@@ -6,8 +6,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("https://videndjurs.sharepoint.com/sites/webith220124/Delte%20dokumenter/EKSAMEN%20-%20november%202022/pinwheels-gfdc541706_1920.jpg");
-
+  // background-image: url("https://videndjurs.sharepoint.com/sites/webith220124/Delte%20dokumenter/EKSAMEN%20-%20november%202022/pinwheels-gfdc541706_1920.jpg");
+  background-image: url(
+  "../../assets/image/bgimage.jpg"
+  );
+  
   .textContainer {
     text-align: center;
     padding-top: 6rem;
