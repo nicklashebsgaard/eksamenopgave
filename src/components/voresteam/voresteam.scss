@@ -30,18 +30,16 @@
   }
 
   .imageContainer {
-    padding: 1rem 1rem;
     position: relative;
     z-index: 2;
     overflow: hidden;
 
-    &::after {
-      content: "";
+    .greyBg {
       position: absolute;
-      bottom: 1rem;
+      bottom: 0.25rem;
       right: 1rem;
       left: 1rem;
-      height: 100%;
+      height: 75%;
       width: 100%;
       z-index: -1;
       background-color: $platinum;
@@ -49,16 +47,14 @@
     }
 
     .hoverCard {
-      bottom: -100px;
-    }
-
-    &:hover .hoverCard {
-      content: "";
+      display: flex;
+      align-items: end;
+      justify-content: center;
       position: absolute;
-      bottom: 1rem;
+      bottom: -100%;
       right: 1rem;
       left: 1rem;
-      height: 100%;
+      height: 80%;
       width: 100%;
       z-index: 3;
       background-color: $safety-orange-blaze-orange;
@@ -69,7 +65,18 @@
     img {
       max-width: 100%;
       height: auto;
+      z-index: 4;
     }
+  }
+  .teamContainer:hover .hoverCard {
+    bottom: 0;
+    p{
+     margin-bottom: 20%
+    }
+  }
+
+  .hoverContent {
+    padding: 2rem 0;
   }
 }
 
@@ -77,7 +84,7 @@
 /* PHONE */
 @include mobile {
   .VoresTeam {
-    .teamContainer{
+    .teamContainer {
       width: 90%;
     }
 

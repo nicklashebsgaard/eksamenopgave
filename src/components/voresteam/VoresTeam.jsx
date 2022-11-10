@@ -57,11 +57,16 @@ const VoresTeam = () => {
                 <div className="teamContainer" key={"team" + i}>
                     
                     <div className="imageContainer">
-                            <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" loading="lazy" />
                         <div className="hoverCard" >
-                            {t.name}
-                            {t.title}
+                            <div className="hoverContent">
+
+                              <p>{t.name}</p>
+                              <p>{t.title}</p>
+                            </div>
                         </div>
+                      <div className="greyBg"></div>
+                            <img src={"http://localhost:5333/images/team/" + t.image} alt="vores team" loading="lazy" />
+
                     </div>
 
                 </div>

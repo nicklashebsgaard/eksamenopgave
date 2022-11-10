@@ -63,11 +63,13 @@ const SidsteNyt = () => {
 
       <div className="contentContainer">
         {nyheder &&
-          nyheder.slice(0, 3).map((n) => (
+          nyheder.map((n) => (
             <div className="newsCard" key={n._id}>
 
               <div className="dateContainer">
-                {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})}
+                <div className="dateText">
+                  {new Date (n.received).toLocaleDateString("da", {day: "numeric", month: "long"})}
+                </div>
               </div>
 
               <div className="imageContainer">
@@ -85,7 +87,7 @@ const SidsteNyt = () => {
 
             </div>
 
-          ))}
+          )).reverse().slice(0, 3)}
 
       </div>
             

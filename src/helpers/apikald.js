@@ -97,7 +97,7 @@ export const getNews = () => {
 
 }
 
-// ---------- NEWS -------------------------------------------
+// ---------- FAQ -------------------------------------------
 // ------------------------------------------------------------
 
 export const getFaq = () => {
@@ -106,6 +106,20 @@ export const getFaq = () => {
 
     let response = axiosBase.get("faq");
     
+    return response;
+
+}
+
+// ---------- BOOKING -------------------------------------------
+// ------------------------------------------------------------
+// POST - Book service
+
+export const getBook = (book) => {
+
+    // POST * http://localhost:5333/booking
+
+    let response = axiosBase.post("booking", book);
+
     return response;
 
 }

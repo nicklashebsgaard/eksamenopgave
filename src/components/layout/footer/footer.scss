@@ -77,7 +77,8 @@ footer {
         input {
           width: 100%;
           border-radius: $ButtonRadius;
-          border: 1px solid $gainsboro;
+          border: 1px solid $independence;
+          background-color: $independence;
           padding: 1rem 0;
           text-indent: 1rem;
         }
