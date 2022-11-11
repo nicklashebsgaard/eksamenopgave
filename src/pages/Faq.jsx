@@ -45,7 +45,7 @@ const Faq = () => {
 
       <div className="flexContainer">
         <div className="titleText">
-          <h1>Service</h1>
+          <h1>FAQ</h1>
         </div>
 
         <div className="breadcrumbContainer">

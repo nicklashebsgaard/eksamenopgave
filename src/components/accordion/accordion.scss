@@ -3,7 +3,7 @@
 .Accordion {
   width: 70%;
   margin: 2rem auto;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   .accordionTitle {
     display: flex;
     flex-direction: row;
@@ -26,8 +26,17 @@
     border: 1px solid $gainsboro;
     border-bottom-left-radius: $ButtonRadius;
     border-bottom-right-radius: $ButtonRadius;
-    p{
+    p {
       color: $sonic-silver;
     }
+  }
+}
+
+// * ------------------- breakpoints ------------------- */
+
+/* PHONE */
+@include mobile {
+  .Accordion {
+    width: 90%;
   }
 }
