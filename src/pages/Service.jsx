@@ -76,11 +76,11 @@ const Service = () => {
           service && service.map((s, i) =>
           <div className="serviceList" key={"servicelist" + i}>
             <button onClick={() => setServiceDataId(s._id)}>
-              <p>{s.title} 
+             {s.title} 
                 <div className="icon">
                   <FaLongArrowAltRight />
                 </div>
-              </p>
+              
             </button>
           </div>
         )}

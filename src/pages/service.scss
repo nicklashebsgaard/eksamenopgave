@@ -55,15 +55,15 @@
           border-color: $gainsboro;
           padding: 1rem 0;
           width: 100%;
-
-          p {
+          display: flex;
+            align-items: center;
+            padding-left: 1rem;
             display: flex;
             align-items: center;
             padding-left: 1rem;
             .icon {
               padding-left: 1rem;
             }         
-          }
 
           &:hover {
             background-color: $safety-orange-blaze-orange;
