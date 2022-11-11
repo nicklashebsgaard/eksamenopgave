@@ -180,6 +180,13 @@
 @include mobile {
   .Nyheder {
     .wrapper {
+      .newsCard {
+        width: 100%;
+      }
+
+      .arkivContainer {
+        padding: 2rem 0 0 0;
+      }
     }
   }
 }

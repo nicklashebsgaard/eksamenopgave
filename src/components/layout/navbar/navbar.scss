@@ -105,14 +105,14 @@
       height: 0; // skjul
       width: 100%;
       overflow: hidden;
-
+      
       &.active {
         position: absolute;
         left: 0;
         right: 0;
         top: 4rem;
         height: 300px;
-        background-color: $onyx;
+        background-color: $white;
       }
     }
 
@@ -123,11 +123,26 @@
       li {
         text-align: start;
       }
+
+      .menuItem{
+        padding: 0 1rem;
+        border: 1px solid $white;
+      }
+
+      a {
+        color: $white;
+        background-color: $independence;
+        &:hover {
+          transition: background-color 1s;
+          background-color: $safety-orange-blaze-orange;
+        }
+      }
+      
     }
 
-    .logoutContainer {
-      flex-direction: column;
-    }
+    // .logoutContainer {
+    //   flex-direction: column;
+    // }
 
     .searchContainer {
       position: absolute;
