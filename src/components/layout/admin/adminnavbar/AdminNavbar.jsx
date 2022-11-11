@@ -19,9 +19,6 @@ const AdminNavbar = () => {
          <NavLink to="adminnews">ADMIN News(Opret-Ret-Slet)</NavLink> 
         </li>
         <li>
-         <NavLink to="admintoursopret">ADMIN Opret ny tour</NavLink> 
-        </li>
-        <li>
          <NavLink to="adminaboutret">Ret "Om os"</NavLink> 
         </li>
         <li>

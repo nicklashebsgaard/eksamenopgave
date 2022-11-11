@@ -2,7 +2,7 @@
 import "./adminnews.scss"; 
 
 // API apikald
-import { deleteNews, getNews} from "./../../../helpers/apikald";
+import { deleteNews, getNews} from "../../../helpers/apikald";
 
 // LINK - react-router-dom
 import { Link } from "react-router-dom";
@@ -46,7 +46,7 @@ const AdminNews = () => {
     
   }, [message] ); // kører ved load og ved ændringer i state message
   
-  // håndter sletning af "klikket" tour
+  // håndter sletning af "klikket" news
   const handleDelete = (id) => {
     
     if(window.confirm("Er du sikker på at du vil slette denne?")) {
@@ -69,9 +69,9 @@ const AdminNews = () => {
 
   return (
 
-    //  1. Oversigt over alle tours
-    //  Link til opret ny tour
-    //  map'ed alle tours ud med mulighed for 
+    //  1. Oversigt over alle newss
+    //  Link til opret ny news
+    //  map'ed alle newss ud med mulighed for 
     //  ret (Skal sende ID'en med)  
     //  slet (Forgår på siden her) 
 

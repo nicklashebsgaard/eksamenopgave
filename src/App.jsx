@@ -12,9 +12,8 @@ import Login from './components/login/Login';
 // PAGES
 import NoMatch from './components/nomatch/NoMatch';
 import AdminHome from './pages/admin/adminhome/AdminHome';
-import AdminNews from './pages/admin/adminnews/AdminNews';
-import AdminToursCreate from './pages/admin/admintourscreate/AdminToursCreate';
-import AdminToursEdit from './pages/admin/admintoursedit/AdminToursEdit';
+import AdminNews from './pages/admin/admintours/AdminNews';
+import AdminToursEdit from "./pages/admin/admintoursedit/AdminToursEdit";
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
 import Forside from './pages/Forside';
 import Kontakt from './pages/Kontakt';
@@ -57,7 +56,6 @@ const App = () => {
       
         <Route index element={<AdminHome />} />  
         <Route path="adminnews" element={<AdminNews />} />
-        <Route path="admintoursopret" element={<AdminToursCreate />} />
         <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
         <Route path="adminaboutret" element={<AdminAbout />} />
         <Route path="*" element={<NoMatch />} /> 
