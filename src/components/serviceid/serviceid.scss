@@ -2,4 +2,48 @@
 
 .ServiceId {
     grid-column: 2/-1;
+
+    .textContainer {
+        padding: 1rem 0;
+    }
+
+    .titleText {
+        padding: 1rem 0;
+    }
+
+    .tesserText {
+        padding: 1rem 0;
+        color: $sonic-silver;
+    }
+
+    .contentText{
+        padding: 1rem 0;
+        strong {
+            font-weight: normal;
+        }
+        ul, ol {
+            padding-left: 1rem;
+        }
+
+    }
+}
+
+/* ------------------- breakpoints ------------------- */
+/* TABLET */
+@include tablet {
+    .Service {
+        .wrapper {
+            width: 90%;
+        }
+    }
+}
+
+/* PHONE */
+@include mobile {
+    .Service {
+        .wrapper {
+            padding: 4rem 1rem;
+            width: 100%;
+        }
+    }
 }

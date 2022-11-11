@@ -3,6 +3,7 @@
 .BookNow {
   box-shadow: 0px 2px 4px;
   padding: 1rem 0;
+  
   .wrapper {
     background-color: $white;
     display: flex;
@@ -38,6 +39,14 @@
       text-indent: 10px;
     }
   }
+
+  // Hider arrows fra telefon input
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+    }
 
   .buttonStyle {
     background-color: $safety-orange-blaze-orange;

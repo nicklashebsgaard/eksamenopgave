@@ -4,7 +4,7 @@ import "./accordion.scss";
 import { useState, useEffect } from "react";
 
 const Accordion = ({ faq }) => {
-  // State til om den skal expand eller modsat
+  // State til om den skal expand 
   const [isActive, setIsActive] = useState(false);
 
   return (

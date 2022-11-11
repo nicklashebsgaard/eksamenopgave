@@ -15,6 +15,19 @@ export const contactInformation = () => {
 
 }
 
+// ---------- Kontakt info  -------------------------------------------
+// ------------------------------------------------------------
+
+export const postContact = () => {
+
+    // POST * http://localhost:5333/contact
+
+    let response = axiosBase.post("contact");
+    
+    return response;
+
+}
+
 // ---------- SLIDER -------------------------------------------
 // ------------------------------------------------------------
 

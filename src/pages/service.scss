@@ -30,6 +30,7 @@
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 2rem;
     width: 70%;
     margin: 0 auto;
     padding: 4rem 0;
@@ -45,5 +46,31 @@
         }
       }
     }
+
+    .serviceListContainer {
+      .serviceList {
+        padding-bottom: 1rem;
+        button {
+          border-radius: $ButtonRadius;
+          border-color: $gainsboro;
+          padding: 1rem 0;
+          width: 100%;
+
+          p {
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            .icon {
+              padding-left: 1rem;
+            }         
+          }
+
+          &:hover {
+            background-color: $safety-orange-blaze-orange;
+          }
+        }
+      }
+    }
   }
 }
+

@@ -66,8 +66,11 @@ const Faq = () => {
         {faq && faq.map((faq) => (
 
           <Accordion faq={faq} />
+
         ))}
+
     <ButtonToTop />
+    
     </section>
 
   );

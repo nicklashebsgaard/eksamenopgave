@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 
 // API 
 import { getVoresService } from "../helpers/apikald";
+// ICON
+import {FaLongArrowAltRight} from "react-icons/fa";
 
 // COMPONENTS
 import ErrorMessage from "../components/errormessage/ErrorMessage";
@@ -68,15 +70,20 @@ const Service = () => {
 
       <div className="wrapper">
 
-
-      {
-        service && service.map((s, i) =>
-        <div className="serviceList" key={"servicelist" + i}>
-          <button onClick={() => setServiceDataId(s._id)}>
-            {s.title}
-          </button>
-        </div>
-      )}
+      <div className="serviceListContainer">
+        {
+          service && service.map((s, i) =>
+          <div className="serviceList" key={"servicelist" + i}>
+            <button onClick={() => setServiceDataId(s._id)}>
+              <p>{s.title} 
+                <div className="icon">
+                  <FaLongArrowAltRight />
+                </div>
+              </p>
+            </button>
+          </div>
+        )}
+      </div>
 
       <ServiceId data={ServiceDataId} />
 

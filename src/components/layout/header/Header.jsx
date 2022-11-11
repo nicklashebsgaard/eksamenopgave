@@ -13,14 +13,15 @@ import {contactInformation} from "./../../../helpers/apikald";
 // Brand Logo
 import Brand from "./../../../assets/image/logo.png";
 
-// COMPONENTS
-import Loader from "./../../loader/Loader";
-import ErrorMessage from "./../../errormessage/ErrorMessage";
-
 // ICONS 
 import {MdPlace} from "react-icons/md";
 import {BiTime} from "react-icons/bi";
 import {FaPhoneAlt} from "react-icons/fa";
+
+// COMPONENTS
+import Loader from "./../../loader/Loader";
+import ErrorMessage from "./../../errormessage/ErrorMessage";
+
 
 const Header = () => {
 

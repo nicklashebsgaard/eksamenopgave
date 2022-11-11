@@ -15,8 +15,8 @@ import Loader from "../loader/Loader";
 import ErrorMessage from "../errormessage/ErrorMessage";
 
 const ServiceId = ({ data }) => {
-  const [serviceData, setServiceData] = useState();
 
+  const [serviceData, setServiceData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -69,7 +69,7 @@ const ServiceId = ({ data }) => {
           </div>
 
           <div className="textContainer">
-            <div className="titleText">{serviceData.title}</div>
+            <h1 className="titleText">{serviceData.title}</h1>
             <div className="tesserText">{serviceData.teaser}</div>
             <div className="contentText">{Parser(serviceData.content)}</div>
           </div>
