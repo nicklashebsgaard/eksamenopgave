@@ -7,6 +7,9 @@ import { getTeam } from "../../helpers/apikald";
 // React useState, useEffect
 import { useState, useEffect } from "react";
 
+// ICON
+import {FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP} from "react-icons/fa";
+
 // COMPONENTS
 import ErrorMessage from "./../errormessage/ErrorMessage";
 import Loader from "./../loader/Loader";
@@ -62,6 +65,24 @@ const VoresTeam = () => {
 
                               <p>{t.name}</p>
                               <p>{t.title}</p>
+                              <div className="iconcontianer">
+                                <div className="iconFa">
+                                <FaFacebookF />
+
+                                </div>
+                                <div className="iconFa">
+
+                                <FaTwitter />
+                                </div>
+                                <div className="iconFa">
+
+                                <FaLinkedinIn />
+                                </div>
+                                <div className="iconFa">
+
+                                <FaPinterestP />
+                                </div>
+                              </div>
                             </div>
                         </div>
                       <div className="greyBg"></div>

@@ -77,6 +77,15 @@
 
   .hoverContent {
     padding: 2rem 0;
+    color: $white;
+  }
+
+  .iconcontianer {
+    display: flex;
+
+    .iconFa {
+      margin-left: .3rem;
+    }
   }
 }
 
