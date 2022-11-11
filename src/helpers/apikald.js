@@ -122,11 +122,21 @@ export const getNews = () => {
 
 }
 
-export const editNews = (updatedNews) => {
+export const getNewsId = (ID) => {
+
+    // GET * http://localhost:5333/news
+
+    let response = axiosBase.get("news/" + ID);
+    
+    return response;
+
+}
+
+export const editNews = (updatedNews, newsID) => {
 
     // PUT * http://localhost:5333/news/admin/6367d2052632dd14e3c98e16
 
-    let response = axiosBase.put("about/admin", updatedNews);
+    let response = axiosBase.put("about/admin/" + newsID , updatedNews);
 
     return response;
 
