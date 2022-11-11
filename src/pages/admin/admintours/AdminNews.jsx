@@ -1,5 +1,5 @@
 // SCSS
-import "./admintours.scss"; 
+import "./adminnews.scss"; 
 
 // API apikald
 import { deleteNews, getNews} from "./../../../helpers/apikald";
@@ -86,19 +86,19 @@ const AdminNews = () => {
         {error && <ErrorMessage />}
 
         {
-          news && news.map( t => 
+          news && news.map( n => 
             
-          <div className="card" key={t._id}>
+          <div className="card" key={n._id}>
 
-          <h2>{t.title}</h2>
-          <p>{new Date (t.traveldate).toLocaleDateString("da-Dk", { day: "numeric", month: "long", year: "numeric" })}</p>
-          <p>{t.teaser}</p>
-          <div>{Parser(t.content)}</div> 
+          <h2>{n.title}</h2>
+          <p>{new Date (n.traveldate).toLocaleDateString("da-Dk", { day: "numeric", month: "long", year: "numeric" })}</p>
+          <p>{n.teaser}</p>
+          <div>{Parser(n.content)}</div> 
           
           <div className="buttonContainer">
 
             <div className="deleteContainer">
-              <button id="delete" onClick={ () => handleDelete(t._id) }>
+              <button id="delete" onClick={ () => handleDelete(n._id) }>
                 <span className="material-symbols-outlined">
                   delete
                 </span>
@@ -106,7 +106,7 @@ const AdminNews = () => {
             </div>
             
             <div className="editContainer">
-              <Link to={"/admin/admintoursret/" + t._id}>
+              <Link to={"/admin/admintoursret/" + n._id}>
                 <button id="edit">
                   <span className="material-symbols-outlined">
                     edit

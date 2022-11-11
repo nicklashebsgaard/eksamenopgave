@@ -12,7 +12,7 @@ import Login from './components/login/Login';
 // PAGES
 import NoMatch from './components/nomatch/NoMatch';
 import AdminHome from './pages/admin/adminhome/AdminHome';
-import AdminTours from './pages/admin/admintours/AdminTours';
+import AdminNews from './pages/admin/adminnews/AdminNews';
 import AdminToursCreate from './pages/admin/admintourscreate/AdminToursCreate';
 import AdminToursEdit from './pages/admin/admintoursedit/AdminToursEdit';
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
@@ -35,7 +35,7 @@ const App = () => {
     <Routes>
 
       {/* PUBLIC DEL */}
-
+      
       <Route path='/' element={<Layout />}> 
       
         <Route index element={<Forside />} /> 
@@ -56,7 +56,7 @@ const App = () => {
       <Route path='/admin' element={<AdminLayout />}> 
       
         <Route index element={<AdminHome />} />  
-        <Route path="admintours" element={<AdminTours />} />
+        <Route path="adminnews" element={<AdminNews />} />
         <Route path="admintoursopret" element={<AdminToursCreate />} />
         <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
         <Route path="adminaboutret" element={<AdminAbout />} />

@@ -16,7 +16,7 @@ const AdminNavbar = () => {
          <NavLink to="/admin" end>ADMIN Home</NavLink> 
         </li>
         <li>
-         <NavLink to="admintours">ADMIN News(Opret-Ret-Slet)</NavLink> 
+         <NavLink to="adminnews">ADMIN News(Opret-Ret-Slet)</NavLink> 
         </li>
         <li>
          <NavLink to="admintoursopret">ADMIN Opret ny tour</NavLink> 
