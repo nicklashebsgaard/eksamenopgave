@@ -1,9 +1,6 @@
 // SCSS
 import "./voresservice.scss";
 
-// Icons
-import { BsCircle } from "react-icons/bs";
-
 // image
 import ServiceWorker from "./../../assets/image/about/1.png";
 

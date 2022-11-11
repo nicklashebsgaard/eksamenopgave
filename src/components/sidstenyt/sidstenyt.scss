@@ -2,7 +2,7 @@
 
 .SidsteNyt {
   margin: 4rem 0;
-
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   .titleContainer {
     text-align: center;
 
@@ -14,6 +14,7 @@
     }
 
     p {
+      color: $sonic-silver;
       padding-bottom: 2rem;
     }
 

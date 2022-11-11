@@ -75,9 +75,7 @@ const VoresKunder = () => {
       <Carousel  wrapAround="true" slidesToShow={3} >
      
       {testimonial &&
-        randomMixer(testimonial).
-        slice(0, 4)
-          .map((t, i) => (
+        randomMixer(testimonial).slice(0, 4).map((t, i) => (
             <div className="flexContainer" key={"kunde" + i}>
               <div className="testimonialCard" >
                 <div className="cardContent">
