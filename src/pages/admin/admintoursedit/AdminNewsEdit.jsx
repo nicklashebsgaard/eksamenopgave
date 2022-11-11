@@ -48,10 +48,6 @@ const AdminNewsEdit = () => {
     getNewsId(ID)
       .then((responsedata) => {
         setNews(responsedata.data); // put data fra api'et i state
-
-        // TEMP snup content og roomtype og put i state til hhv. content og roomtype
-        /* setContent(responsedata.data.content)
-        setRoomtype(responsedata.data.roomtype) */
         
         setError(false);
       })

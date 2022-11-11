@@ -27,7 +27,6 @@ const SearchInput = () => {
                 </span>
             </button>
         </div>
-        
     
     </form>
 

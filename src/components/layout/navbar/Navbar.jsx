@@ -73,11 +73,10 @@ const Navbar = () => {
             <li className="menuItem">
               <NavLink to="admin">Admin</NavLink> 
             </li>
-            <div className="logoutContainer">
-              <li className="noHover">
+            
+              <li className="noHover logoutContainer">
                 <Logout />
               </li>
-            </div>
             </>
           }
 
