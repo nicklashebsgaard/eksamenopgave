@@ -37,15 +37,15 @@ const Navbar = () => {
           
           <li className="menuItem">
             {/* End tilføjet for at ungå at hom har active konstant */}
-            <NavLink to="/" end>Forside</NavLink> 
+            <NavLink to="/" end>FORSIDE</NavLink> 
           </li>
 
           <li className="menuItem">
-            <NavLink to="om-os">Om os</NavLink> 
+            <NavLink to="om-os">OM OS</NavLink> 
           </li>
 
           <li className="menuItem">
-            <NavLink to="service">Service</NavLink> 
+            <NavLink to="service">SERVICE</NavLink> 
           </li>
 
           <li className="menuItem">
@@ -53,19 +53,19 @@ const Navbar = () => {
           </li>
 
           <li className="menuItem">
-            <NavLink to="nyheder">Nyheder</NavLink> 
+            <NavLink to="nyheder">NYHEDER</NavLink> 
           </li>
 
           <li className="menuItem">
-            <NavLink to="kontakt">Kontakt os</NavLink> 
+            <NavLink to="kontakt">KONTAKT OS</NavLink> 
           </li>
 
-          {
+          {/* {
             !user && 
             <li className="menuItem">
               <NavLink to="login">Login</NavLink> 
             </li>
-          }
+          } */}
 
           {
             user && 

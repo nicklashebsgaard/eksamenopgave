@@ -64,6 +64,12 @@ const VoresKunder = () => {
           lorem ipsum dotor sit amet consectetur adipsicing etit sed do eiusm
           tempor
         </p>
+
+        <div className="CircleLineContainer">
+          <div id="line1"></div>
+          <div id="circle"></div>
+          <div id="line2"></div>
+        </div>
         
       </div>
       <Carousel  wrapAround="true" slidesToShow={3} >

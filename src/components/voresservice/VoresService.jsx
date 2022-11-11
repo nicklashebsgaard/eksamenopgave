@@ -58,6 +58,12 @@ const VoresService = () => {
             lorem ipsum dolor sit amet consectetur adipsicing elit sed do eiusm
             tempor
           </p>
+          <div className="CircleLineContainer">
+            <div id="line1"></div>
+            <div id="circle"></div>
+            <div id="line2"></div>
+          </div>
+          
         </div>
 
         <div className="imageContainer">

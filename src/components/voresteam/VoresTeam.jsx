@@ -50,7 +50,11 @@ const VoresTeam = () => {
             <div className="textContainer">
                 <h2>Vores <span>team</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor</p>
-                
+                <div className="CircleLineContainer">
+                  <div id="line1"></div>
+                  <div id="circle"></div>
+                  <div id="line2"></div>
+                </div>
             </div>
 
         <div className="contentContainer">

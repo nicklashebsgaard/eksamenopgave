@@ -53,6 +53,12 @@ const SidsteNyt = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
           tempor
         </p>
+
+        <div className="CircleLineContainer">
+            <div id="line1"></div>
+            <div id="circle"></div>
+            <div id="line2"></div>
+        </div>
       </div>
 
       <div className="contentContainer">
