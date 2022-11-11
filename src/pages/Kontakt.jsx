@@ -95,6 +95,7 @@ const Kontakt = () => {
         <div className="mapouter">
           <div className="gmap_canvas">
             <iframe
+              title="myFrame"
               width="100%"
               height="100%"
               id="gmap_canvas"
@@ -104,7 +105,6 @@ const Kontakt = () => {
               marginHeight="0"
               marginWidth="0"
             ></iframe>
-            <a href="https://fmovies-online.net"></a>
           </div>
         </div>
       </div>

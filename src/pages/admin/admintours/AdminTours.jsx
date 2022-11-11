@@ -2,7 +2,7 @@
 import "./admintours.scss"; 
 
 // API apikald
-import { deleteTour, getAllTours} from "./../../../helpers/apikald";
+import { deleteNews, getNews} from "./../../../helpers/apikald";
 
 // LINK - react-router-dom
 import { Link } from "react-router-dom";
@@ -17,12 +17,12 @@ import Parser from "html-react-parser";
 import Loader from "../../../components/loader/Loader";
 import ErrorMessage from "../../../components/errormessage/ErrorMessage";
 
-const AdminTours = () => {
+const AdminNews = () => {
 
   // STATE til data, fejl og loading
+  const [news, setNews] = useState() // data fra api
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [tours, setTours] = useState() // data fra api
 
   // besked efter slet
   const [message, setMessage] = useState()
@@ -32,9 +32,9 @@ const AdminTours = () => {
     
     setLoading(true) // vis en loader mens api'et kaldes (og endnu ikke har svaret)
 
-    getAllTours()
+    getNews()
       .then((responsedata) => {
-        setTours(responsedata.data) // put data fra api'et i state
+        setNews(responsedata.data) // put data fra api'et i state
       })
       .catch((err) => {
         setError(true) // nulstill en evt. tidligere fejl
@@ -52,7 +52,7 @@ const AdminTours = () => {
     if(window.confirm("Er du sikker på at du vil slette denne?")) {
 
       setLoading(true)
-          deleteTour(id)
+          deleteNews(id)
             .then((responsedata) => {
               console.log(responsedata.data)
               setMessage(id)
@@ -75,18 +75,18 @@ const AdminTours = () => {
     //  ret (Skal sende ID'en med)  
     //  slet (Forgår på siden her) 
 
-    <div className="adminTours">
+    <div className="adminNews">
         
         {/* { message && <h2>{message}</h2>}  */} 
 
-        <h1>AdminTours</h1>
+        <h1>Admin News</h1>
         
         {loading && <Loader />}
 
         {error && <ErrorMessage />}
 
         {
-          tours && tours.map( t => 
+          news && news.map( t => 
             
           <div className="card" key={t._id}>
 
@@ -127,4 +127,4 @@ const AdminTours = () => {
 
 };
 
-export default AdminTours;
+export default AdminNews;

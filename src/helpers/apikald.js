@@ -132,6 +132,17 @@ export const editNews = (updatedNews) => {
 
 }
 
+export const deleteNews = (idNews) => {
+
+    // DEL * http://localhost:5333/news/admin/6367d2052632dd14e3c98e16
+
+    let response = axiosBase.delete("news/admin/" + idNews);
+
+    return response;
+
+}
+
+
 // ---------- FAQ -------------------------------------------
 // ------------------------------------------------------------
 

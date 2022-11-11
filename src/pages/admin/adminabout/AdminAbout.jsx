@@ -104,7 +104,7 @@ const AdminAbout = () => {
 
       <div>
         <label htmlFor="inpTitel">Titel</label>
-        <input type="text" name="titel" id="inpTitel" defaultValue={about.title} placeholder="Indtast titel"/>
+        <input type="text" name="title" id="inpTitel" defaultValue={about.title} placeholder="Indtast titel"/>
       </div>
 
        {/* Content */}
