@@ -2,15 +2,12 @@
 import "./adminabout.scss";
 
 // COMPONENTS
-import ErrorMessage from "./../../../components/errormessage/ErrorMessage";
+import ErrorMessage from "../../../components/errormessage/ErrorMessage";
 import Loader from "../../../components/loader/Loader";
 import MessageBox from "../../../components/messagebox/MessageBox";
 
 // React useState - useEffect
 import { useState, useEffect } from "react";
-
-// Hook til at lave thumb
-import useThumb from "../../../hooks/useThumb";
 
 // API apikald
 import { editAbout, getAbout } from "../../../helpers/apikald";
@@ -39,9 +36,6 @@ const AdminAbout = () => {
 
   // STATE til tekst fra quil-rte
   const [content, setContent] = useState();
-
-  // Thumb til at vise image i input type file
-  const [thumbImage, makeThumb] = useThumb();
 
   useEffect(() => {
 
@@ -82,10 +76,6 @@ const AdminAbout = () => {
     .then((response) => {
         console.log(response.data);  // put data fra api'et i state
         setMessage('"Om os" er rettet!')
-
-        // Tøm input-file og thumb
-        document.forms[0].image.value = "" // tøb input-feltet "name=image"
-        makeThumb("")
     })
     .catch((err) => {
         console.log(err); // nulstill en evt. tidligere fejl
@@ -94,14 +84,6 @@ const AdminAbout = () => {
         setLoading(false)
         window.scroll(0, 0) // scroll til top af siden
     })
-  }
-
-// Tøm input-file og thumb (hvis admin fortryder valg af image)
-  const resetFileupload = (e) => {
-
-    document.forms[0].image.value = "" // tøb input-feltet "name=image"
-    makeThumb("")
- 
   }
   
   return (
@@ -137,45 +119,6 @@ const AdminAbout = () => {
                 onReady={ !content ? setContent ( about.content) : null}
                 onChange={setContent}
               />
-      </div>
-
-      {/* image */}
-
-      <div>
-        <label htmlFor="inpImg">Vælg evt. et andet billede (overskriver det eksisterende)</label>
-
-       <p>Nuværende foto:</p> 
-
-        <img src={"http://localhost:5099/images/about/" + about.image} alt="nuværende billede" width="300" />
-
-        <input 
-        type="file" 
-        name="image"
-        id="inpImg"
-        onChange={ (e) => makeThumb(e.target.files[0])}
-        />
-
-        <p>Du har valgt dette nu foto:</p>  
-
-        {
-          
-          thumbImage && 
-
-          <>
-
-          <img src={thumbImage} width="200" alt="Nye valgt foto" />
-
-            <button className="reset" type="button" onClick={(e) => resetFileupload(e)}>
-              <span className="material-symbols-outlined cancel">
-                cancel
-              </span>
-            </button>
-
-          </>
-
-        }
-
-
       </div>
 
       {/* SUBMIT BUTTON */}

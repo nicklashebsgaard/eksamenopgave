@@ -63,9 +63,9 @@ const Faq = () => {
         </div>
       </div>
 
-        {faq && faq.map((faq) => (
+        {faq && faq.map((faq, i) => (
 
-          <Accordion faq={faq} />
+          <Accordion faq={faq} key={"faq" + i}/>
 
         ))}
 

@@ -41,7 +41,6 @@ export const forsideSlider = () => {
 
 }
 
-
 // ---------- OM OS -------------------------------------------
 // ------------------------------------------------------------
 
@@ -56,6 +55,19 @@ export const getOmos = () => {
     return response;
 
 }
+
+// PUT - ret Om os
+
+export const editAbout = (updatedAbout) => {
+
+    // PUT * http://localhost:5099/about/admin
+
+    let response = axiosBase.put("about/admin", updatedAbout);
+
+    return response;
+
+}
+
 
 // ---------- SERVICES -------------------------------------------
 // ------------------------------------------------------------
@@ -106,6 +118,16 @@ export const getNews = () => {
 
     let response = axiosBase.get("news");
     
+    return response;
+
+}
+
+export const editNews = (updatedNews) => {
+
+    // PUT * http://localhost:5333/news/admin/6367d2052632dd14e3c98e16
+
+    let response = axiosBase.put("about/admin", updatedNews);
+
     return response;
 
 }
@@ -268,17 +290,6 @@ export const getAbout = () => {
 
 }
 
-// PUT - ret about
-
-export const editAbout = (updatedAbout) => {
-
-    // PUT * http://localhost:5099/about/admin
-
-    let response = axiosBase.put("about/admin", updatedAbout);
-
-    return response;
-
-}
 
 // ---------- CONTACT -----------------------------------------
 // ------------------------------------------------------------
