@@ -17,6 +17,7 @@
     }
 
     .contentText{
+        font-family: 'Roboto';
         padding: 1rem 0;
         strong {
             font-weight: normal;
@@ -24,7 +25,9 @@
         ul, ol {
             padding-left: 1rem;
         }
-
+        em {
+            font: unset;
+        }
     }
 }
 

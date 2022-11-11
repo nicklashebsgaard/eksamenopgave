@@ -4,9 +4,14 @@
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 66%, $independence 66%), url("../../assets/image/bgimage.jpg");
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 66%,
+      $independence 66%
+    ),
+    url("../../assets/image/bgimage.jpg");
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  
+
   .textContainer {
     text-align: center;
     padding-top: 6rem;
@@ -18,35 +23,32 @@
       }
     }
 
-
-    .CircleLineContainer{
+    .CircleLineContainer {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1rem;
       #line1 {
-        width: 30px; 
+        width: 30px;
         height: 2px;
         background-color: $gainsboro;
       }
-      #circle { 
+      #circle {
         width: 12px;
         height: 12px;
-        background: transparent; 
+        background: transparent;
         border-radius: 50%;
         border: 2px solid $safety-orange-blaze-orange;
         margin: 0 2px;
-     }
-  
-     #line2 {
-      width: 30px; 
-      height: 2px;
-      background-color: $gainsboro;
-     }
-     
+      }
+
+      #line2 {
+        width: 30px;
+        height: 2px;
+        background-color: $gainsboro;
+      }
     }
   }
-
 
   .flexContainer {
     display: flex;
@@ -73,7 +75,7 @@
 
   .testimonialCard {
     background-color: $white;
-    width: 300px;
+    width: 100%;
     height: auto;
     margin: 4.5rem 1rem;
     text-align: center;
@@ -111,4 +113,5 @@
 /* ------------------- breakpoints ------------------- */
 /* DESKTOP */
 @include desktop {
+
 }

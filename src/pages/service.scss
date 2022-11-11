@@ -56,16 +56,17 @@
           padding: 1rem 0;
           width: 100%;
           display: flex;
-            align-items: center;
+          align-items: center;
+          padding-left: 1rem;
+          display: flex;
+          align-items: center;
+          padding-left: 1rem;
+          .icon {
             padding-left: 1rem;
-            display: flex;
-            align-items: center;
-            padding-left: 1rem;
-            .icon {
-              padding-left: 1rem;
-            }         
+          }
 
           &:hover {
+            transition: background-color 1s;
             background-color: $safety-orange-blaze-orange;
           }
         }
@@ -74,3 +75,39 @@
   }
 }
 
+/* ------------------- breakpoints ------------------- */
+/* DESKTOP */
+@include desktop {
+  .Service {
+    .flexContainer {
+      padding: 4rem 5%;
+    }
+
+    .wrapper {
+      width: 90%;
+    }
+  }
+}
+
+/* PHONE */
+@include mobile {
+  .Service .wrapper {
+    display: flex;
+    padding: 4rem 1rem;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .Service .wrapper .serviceListContainer .serviceList {
+    display: flex;
+    justify-content: center;
+}
+
+  .Service .wrapper .serviceListContainer .serviceList button {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+ }
+
+}
