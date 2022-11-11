@@ -21,7 +21,7 @@ import ErrorMessage from "../components/errormessage/ErrorMessage";
 import Loader from "../components/loader/Loader";
 import VoresKunder from "../components/voreskunder/VoresKunder";
 import VoresTeam from "../components/voresteam/VoresTeam";
-
+import ButtonToTop from "../components/buttontotop/ButtonToTop";
 
 const Omos  = () => {
 
@@ -111,7 +111,7 @@ const Omos  = () => {
         
       }
       </div>
-
+      <ButtonToTop />
     </section>
 
     <VoresKunder />

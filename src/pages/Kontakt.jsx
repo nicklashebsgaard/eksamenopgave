@@ -5,7 +5,7 @@ import "./kontakt.scss";
 import React, { useState, useEffect } from "react";
 
 // COMPONENTS
-
+import ButtonToTop from "./../components/buttontotop/ButtonToTop";
 
 const Kontakt = () => {
 
@@ -16,6 +16,7 @@ const Kontakt = () => {
 
       <h1>Kontakt</h1>
 
+    <ButtonToTop />
     </section>
 
   );

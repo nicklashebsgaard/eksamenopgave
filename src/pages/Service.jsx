@@ -11,6 +11,7 @@ import { getVoresService } from "../helpers/apikald";
 import ErrorMessage from "../components/errormessage/ErrorMessage";
 import Loader from "../components/loader/Loader";
 import ServiceId from "../components/serviceid/ServiceId";
+import ButtonToTop from "../components/buttontotop/ButtonToTop";
 
 const Service = () => {
 
@@ -80,7 +81,7 @@ const Service = () => {
       <ServiceId data={ServiceDataId} />
 
       </div>
-        
+        <ButtonToTop />
     </section>
 
   );

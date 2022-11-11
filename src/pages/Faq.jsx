@@ -11,7 +11,7 @@ import { getFaq } from "./../helpers/apikald";
 import Accordion from "../components/accordion/Accordion";
 import Loader from "./../components/loader/Loader";
 import ErrorMessage from "./../components/errormessage/ErrorMessage";
-
+import ButtonToTop from "./../components/buttontotop/ButtonToTop";
 const Faq = () => {
 
   const [faq, setFaq] = useState();
@@ -67,7 +67,7 @@ const Faq = () => {
 
           <Accordion faq={faq} />
         ))}
-    
+    <ButtonToTop />
     </section>
 
   );

@@ -18,6 +18,7 @@ import ErrorMessage from "../components/errormessage/ErrorMessage";
 import Loader from "../components/loader/Loader";
 import Pagination from "../components/pagination/Pagination";
 import AmountPerPage from "../components/pagination/amountperpage/AmountPerPage";
+import ButtonToTop from "../components/buttontotop/ButtonToTop";
 
 const Nyheder = () => {
 
@@ -177,7 +178,7 @@ const Nyheder = () => {
             </div>
 
       </div>
-
+          <ButtonToTop />
     </section>
 
   );
