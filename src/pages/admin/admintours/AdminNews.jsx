@@ -106,7 +106,7 @@ const AdminNews = () => {
             </div>
             
             <div className="editContainer">
-              <Link to={"/admin/admintoursret/" + t._id}>
+              <Link to={"/admin/adminnewssret/" + t._id}>
                 <button id="edit">
                   <span className="material-symbols-outlined">
                     edit

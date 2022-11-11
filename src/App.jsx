@@ -13,7 +13,7 @@ import Login from './components/login/Login';
 import NoMatch from './components/nomatch/NoMatch';
 import AdminHome from './pages/admin/adminhome/AdminHome';
 import AdminNews from './pages/admin/admintours/AdminNews';
-import AdminToursEdit from "./pages/admin/admintoursedit/AdminToursEdit";
+import AdminNewsEdit from "./pages/admin/admintoursedit/AdminNewsEdit";
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
 import Forside from './pages/Forside';
 import Kontakt from './pages/Kontakt';
@@ -56,7 +56,7 @@ const App = () => {
       
         <Route index element={<AdminHome />} />  
         <Route path="adminnews" element={<AdminNews />} />
-        <Route path="admintoursret/:ID" element={<AdminToursEdit />} />
+        <Route path="adminnewssret/:ID" element={<AdminNewsEdit />} />
         <Route path="adminaboutret" element={<AdminAbout />} />
         <Route path="*" element={<NoMatch />} /> 
         

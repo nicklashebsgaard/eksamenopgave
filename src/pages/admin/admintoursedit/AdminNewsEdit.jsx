@@ -1,8 +1,8 @@
 // SCSS
-import "./admintoursedit.scss";
+import "./adminnewsedit.scss";
 
 // COMPONENTS
-import ErrorMessage from "./../../../components/errormessage/ErrorMessage";
+import ErrorMessage from "../../../components/errormessage/ErrorMessage";
 import Loader from "../../../components/loader/Loader";
 import MessageBox from "../../../components/messagebox/MessageBox";
 
@@ -13,7 +13,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // API apikald
-import { editNews, getNewsId } from "./../../../helpers/apikald";
+import { editNews, getNewsId } from "../../../helpers/apikald";
 
 // Quill
 import ReactQuill from "react-quill";
@@ -28,16 +28,7 @@ const modules = {
   ],
 };
 
-const AdminToursEdit = () => {
-
-  // vil loop over alle af textareas på siden og gør dem resize på load og når man skriver i feltet
-  document.querySelectorAll("textarea").forEach((element) => {
-    function autoResize(el) {
-      el.style.height = el.scrollHeight + "px";
-    }
-    autoResize(element);
-    element.addEventListener("input", () => autoResize(element));
-  });
+const AdminNewsEdit = () => {
 
   const { ID } = useParams();
 
@@ -189,4 +180,4 @@ const AdminToursEdit = () => {
   
 };
 
-export default AdminToursEdit;
+export default AdminNewsEdit;
