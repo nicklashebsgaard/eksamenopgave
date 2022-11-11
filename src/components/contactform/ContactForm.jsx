@@ -1,82 +1,73 @@
 // SCSS
 import "./contactform.scss";
 
-// React
-import React from "react";
+// React useState, useEffect
+import { useState, useEffect } from "react";
 
 // API
+import { postContact } from "./../../helpers/apikald";
 
 // COMPONENTS
+import ErrorMessage from "./../errormessage/ErrorMessage";
+import Loader from "./../loader/Loader";
 
 const ContactForm = () => {
 
-    // const [message, setMessage] = useState();
-    // const [error, setError] = useState(false)
-    // const [loading, setLoading] = useState(false)
+  const [sendMessage, setSendMessage] = useState();
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-    // const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
+    
+    e.preventDefault(); // VIGTIG: Forhindrer reload/nulstille af siden
 
-    //     e.preventDefault() // VIGTIG: Forhindrer reload/nulstille af siden
-    
-    //     // Sende formularen
-    
-    //     // Opkald til API'et når component er loadet
-    //     setLoading(true) // vis en loader mens api'et kaldes (og endnu ikke har svaret)
-    
-    //     const postMessage = new FormData(e.target); // Input formularens indhold - e.target - i from-data-objekt
-    
-    //     sendMessage(postMessage)
-    //     .then((response) => {
-    //         console.log(response.data);  // put data fra api'et i state
-    //         setMessage("Beskeden er nu sendt af sted")
-    //         setError()
-    //     })
-    //     .catch((err) => {
-    //         setError(true)
-    //         setMessage()
-    //         console.log(err); // nulstill en evt. tidligere fejl
-    //     })
-    //     .finally(() => {
-    //         setLoading(false)
-    //     })
-        
-    //   }
+    setLoading(true); 
+
+    let fData = new FormData(e.target); // Input formularens indhold - e.target - i from-data-objekt
+
+    fData.append("sendMessage", sendMessage); 
+
+    postContact(fData)
+      .then((response) => {
+        console.log(response.data);
+        e.target.reset();
+      })
+      .catch((err) => {
+        setError(true);
+        console.log(err); // nulstill en evt. tidligere fejl
+      })
+      .finally(() => {
+        setLoading(false);
+        window.scroll(0, 0); // scroll til top af siden
+      });
+  };
 
   return (
 
     <div className="ContactForm">
+      {error && <ErrorMessage />}
+      {loading && <Loader />}
 
       <div className="textContainer">
-
         <h2>Kontakt os</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           praesentium minus quos tempore, provident et asperiores sequi repellat
           esse natus.
         </p>
-
       </div>
 
       <div className="formContainer">
-{/* onSubmit={handleSubmit} */}
-        <form >
-
+        <form onSubmit={handleSubmit}>
           <div className="inputsContainer">
             <div>
-              <input
-                type="text"
-                name="name"
-                id="inpNavn"
-                placeholder="Navn"
-                required
-              />
+              <input type="text" name="name" placeholder="Navn" required />
             </div>
 
             <div>
               <input
                 type="email"
                 name="email"
-                id="inpEmail"
                 placeholder="Email Adresse"
                 required
               />
@@ -86,7 +77,6 @@ const ContactForm = () => {
               <input
                 type="number"
                 name="phone"
-                id="inpTelefon"
                 placeholder="Telefon"
                 required
               />
@@ -107,15 +97,10 @@ const ContactForm = () => {
               Send besked
             </button>
           </div>
-
         </form>
-
       </div>
-
     </div>
-
   );
-
 };
 
 export default ContactForm;

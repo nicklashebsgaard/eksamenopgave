@@ -18,11 +18,11 @@ export const contactInformation = () => {
 // ---------- Kontakt info  -------------------------------------------
 // ------------------------------------------------------------
 
-export const postContact = () => {
+export const postContact = (besked) => {
 
     // POST * http://localhost:5333/contact
 
-    let response = axiosBase.post("contact");
+    let response = axiosBase.post("contact", besked);
     
     return response;
 
