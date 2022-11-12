@@ -222,11 +222,11 @@ export const postBook = (book) => {
 
 // GET - søg i tours (Med alt)
 
-export const searchTours = (searchKey) => {
+export const searchQ = (searchKey) => {
 
-    // GET * http://localhost:5099/tours/soeg/xxxxx
+    // GET * http://localhost:5333/search/tes
 
-    let response = axiosBase.get("tours/soeg/" + searchKey );
+    let response = axiosBase.get("search/" + searchKey );
 
     return response;
 

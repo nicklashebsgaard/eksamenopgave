@@ -15,6 +15,7 @@ import AdminHome from './pages/admin/adminhome/AdminHome';
 import AdminNews from './pages/admin/adminnews/AdminNews';
 import AdminNewsEdit from "./pages/admin/admintoursedit/AdminNewsEdit";
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
+import SearchResult from './pages/SearchResult';
 import Forside from './pages/Forside';
 import Kontakt from './pages/Kontakt';
 import Omos from './pages/Omos';
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="om-os" element={<Omos />} /> 
 
         <Route path="login" element={<Login />} /> 
+        <Route path="search/:q" element={<SearchResult />} />
 
         <Route path="*" element={<NoMatch />} /> 
       

@@ -1,0 +1,38 @@
+@import "./../sass/global.scss";
+
+.SearchResult {
+    margin-top: -35px;
+
+    .flexContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 15%;
+      background-color: $platinum;
+  
+      .breadcrumbContainer {
+        ul.breadcrumb {
+          list-style: none;
+          display: flex;
+          align-items: center;
+        }
+        ul.breadcrumb li {
+          display: inline;
+          font-size: 1rem;
+        }
+  
+        a {
+          text-decoration: none;
+          color: $blackis;
+        }
+  
+        span {
+          transform: rotate(270deg);
+        }
+  
+        .color {
+          color: $safety-orange-blaze-orange;
+        }
+      }
+    }
+}

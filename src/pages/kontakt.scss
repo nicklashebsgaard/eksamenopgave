@@ -120,7 +120,7 @@
       display: grid;
       .contaktInfomationBox {
         display: flex;
-    justify-content: center;
+        justify-content: center;
       }
       .contaktInfomationBox .infoContainer {
         display: flex;
@@ -128,14 +128,11 @@
         .infoContentPhone {
           border: none;
         }
-  
+
         .infoContentAddress {
           border: none;
         }
       }
-      
     }
   }
-
-  
 }
