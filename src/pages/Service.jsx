@@ -63,7 +63,7 @@ const Service = () => {
               expand_more
             </span>
 
-            <li>Nyheder</li>
+            <li className="color">Nyheder</li>
 
           </ul>
         </div>

@@ -12,7 +12,7 @@ import Login from './components/login/Login';
 // PAGES
 import NoMatch from './components/nomatch/NoMatch';
 import AdminHome from './pages/admin/adminhome/AdminHome';
-import AdminNews from './pages/admin/admintours/AdminNews';
+import AdminNews from './pages/admin/adminnews/AdminNews';
 import AdminNewsEdit from "./pages/admin/admintoursedit/AdminNewsEdit";
 import AdminAbout from './pages/admin/adminabout/AdminAbout';
 import Forside from './pages/Forside';

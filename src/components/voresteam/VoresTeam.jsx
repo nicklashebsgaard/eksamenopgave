@@ -71,20 +71,29 @@ const VoresTeam = () => {
                               <p>{t.title}</p>
                               <div className="iconcontianer">
                                 <div className="iconFa">
+                                  <a href="#">
+
                                 <FaFacebookF />
+                                  </a>
 
                                 </div>
                                 <div className="iconFa">
+                                <a href="#">
 
                                 <FaTwitter />
+                                </a>
                                 </div>
                                 <div className="iconFa">
+                                <a href="#">
 
                                 <FaLinkedinIn />
+                                </a>
                                 </div>
                                 <div className="iconFa">
+                                <a href="#">
 
                                 <FaPinterestP />
+                                </a>
                                 </div>
                               </div>
                             </div>

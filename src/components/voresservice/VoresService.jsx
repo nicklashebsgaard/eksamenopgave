@@ -4,6 +4,9 @@ import "./voresservice.scss";
 // image
 import ServiceWorker from "./../../assets/image/about/1.png";
 
+// LINK
+import { Link } from "react-router-dom";
+
 // API
 import { getService } from "./../../helpers/apikald";
 
@@ -74,7 +77,11 @@ const VoresService = () => {
             <div className="contentContainer" key={"services" + i}>
               <span className={s.icon}></span>
               <div className="subTitle">
-                <h2>{s.title}</h2>
+                <h2>
+                  <Link to="service">
+                    {s.title}
+                  </Link>
+                </h2>
                 <p>{s.teaser}</p>
               </div>
             </div>

@@ -59,7 +59,7 @@ const Kontakt = () => {
               expand_more
             </span>
 
-            <li>Kontakt</li>
+            <li className="color">Kontakt</li>
           </ul>
         </div>
       </div>

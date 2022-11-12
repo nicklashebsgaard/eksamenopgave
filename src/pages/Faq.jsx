@@ -57,7 +57,7 @@ const Faq = () => {
               expand_more
             </span>
 
-            <li>FAQ</li>
+            <li className="color">FAQ</li>
 
           </ul>
         </div>

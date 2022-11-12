@@ -70,7 +70,7 @@ const Omos  = () => {
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-            <li>Om os</li>
+            <li className="color">Om os</li>
           </ul>
         </div>
 

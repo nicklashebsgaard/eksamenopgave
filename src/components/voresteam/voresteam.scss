@@ -98,6 +98,7 @@
       z-index: 4;
     }
   }
+
   .teamContainer:hover .hoverCard {
     bottom: 0;
     p{
@@ -116,6 +117,10 @@
 
     .iconFa {
       margin-left: .3rem;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
     }
   }
 }

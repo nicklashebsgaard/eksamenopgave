@@ -84,7 +84,7 @@ const SidsteNyt = () => {
                 <h3>{n.title}</h3>
                 <p>{n.content.slice(0,100)}...</p>
               </div>
-
+            
             </div>
 
           )).reverse().slice(0, 3)}

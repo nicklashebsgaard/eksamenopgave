@@ -82,6 +82,7 @@
     border-radius: $ButtonRadius;
 
     .cardContent {
+      cursor: grab;
       padding: 0 1rem;
       img {
         border-radius: 50%;
@@ -113,5 +114,15 @@
 /* ------------------- breakpoints ------------------- */
 /* DESKTOP */
 @include desktop {
+.slider-list {
+  width: 600% !important;
+  
+}
+}
 
+/* PHONE */
+@include mobile {
+  .slider-list {
+    width: 1200% !important;
+  }
 }
