@@ -24,6 +24,11 @@
         color: $safety-orange-blaze-orange;
       }
 
+      a {
+        text-decoration: none;
+        color: $blackis;
+      }
+
       span {
         transform: rotate(270deg);
       }
@@ -40,7 +45,7 @@
     .contaktInfomationBox {
       grid-column: 1/-1;
       border: 1px solid $gainsboro;
-
+      border-radius: $ButtonRadius;
       .infoContainer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

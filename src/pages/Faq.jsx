@@ -4,6 +4,9 @@ import "./faq.scss";
 // React useState, useEffect
 import React, { useState, useEffect } from "react";
 
+// LINK
+import { Link } from "react-router-dom";
+
 // API
 import { getFaq } from "./../helpers/apikald";
 
@@ -51,13 +54,15 @@ const Faq = () => {
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
             
-            <li>Forsiden</li>
-
+          <Link to="/">
+              <li>Forsiden</li>
+            </Link>
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-
-            <li className="color">FAQ</li>
+            <Link to="/faq">
+              <li className="color">FAQ</li>
+            </Link>
 
           </ul>
         </div>

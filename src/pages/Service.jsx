@@ -7,6 +7,9 @@ import { useState, useEffect } from "react";
 // API 
 import { getVoresService } from "../helpers/apikald";
 
+// LINK
+import { Link } from "react-router-dom";
+
 // ICON
 import {FaLongArrowAltRight} from "react-icons/fa";
 
@@ -56,15 +59,15 @@ const Service = () => {
 
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
-            
-            <li>Forsiden</li>
-
+          <Link to="/">
+              <li>Forsiden</li>
+            </Link>
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-
-            <li className="color">Nyheder</li>
-
+            <Link to="/service">
+              <li className="color">Service</li>
+            </Link>
           </ul>
         </div>
       </div>

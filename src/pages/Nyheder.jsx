@@ -62,13 +62,15 @@ const Nyheder = () => {
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
             
-            <li>Forsiden</li>
-
+          <Link to="/">
+              <li>Forsiden</li>
+            </Link>
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-
-            <li className="color">Nyheder</li>
+            <Link to="/nyheder">
+              <li className="color">Nyheder</li>
+            </Link>
 
           </ul>
         </div>

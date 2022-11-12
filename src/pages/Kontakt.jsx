@@ -4,6 +4,9 @@ import "./kontakt.scss";
 // React useState, useEffect
 import React, { useState, useEffect } from "react";
 
+// LINK
+import { Link } from "react-router-dom";
+
 // API
 import { contactInformation } from "./../helpers/apikald";
 
@@ -53,13 +56,15 @@ const Kontakt = () => {
 
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
-            <li>Forsiden</li>
-
+          <Link to="/">
+              <li>Forsiden</li>
+            </Link>
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-
-            <li className="color">Kontakt</li>
+            <Link to="/kontakt">
+              <li className="color">Kontakt</li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -66,11 +66,15 @@ const Omos  = () => {
 
         <div className="breadcrumbContainer">
           <ul className="breadcrumb">
-            <li>Forsiden</li>
+            <Link to="/">
+              <li>Forsiden</li>
+            </Link>
             <span className="material-symbols-outlined expand_more">
               expand_more
             </span>
-            <li className="color">Om os</li>
+            <Link to="/om-os">
+              <li className="color">Om os</li>
+            </Link>
           </ul>
         </div>
 

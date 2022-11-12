@@ -91,7 +91,6 @@ const AdminNews = () => {
           <div className="card" key={t._id}>
 
           <h2>{t.title}</h2>
-          <p>{new Date (t.traveldate).toLocaleDateString("da-Dk", { day: "numeric", month: "long", year: "numeric" })}</p>
           <p>{t.teaser}</p>
           <div>{Parser(t.content)}</div> 
           
