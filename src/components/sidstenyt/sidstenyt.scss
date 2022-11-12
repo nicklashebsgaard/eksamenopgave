@@ -18,35 +18,32 @@
       padding-bottom: 2rem;
     }
 
-    .CircleLineContainer{
+    .CircleLineContainer {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1rem;
       #line1 {
-        width: 30px; 
+        width: 30px;
         height: 2px;
         background-color: $gainsboro;
       }
-      #circle { 
+      #circle {
         width: 12px;
         height: 12px;
-        background: transparent; 
+        background: transparent;
         border-radius: 50%;
         border: 2px solid $safety-orange-blaze-orange;
         margin: 0 2px;
-     }
-  
-     #line2 {
-      width: 30px; 
-      height: 2px;
-      background-color: $gainsboro;
-     }
-     
+      }
+
+      #line2 {
+        width: 30px;
+        height: 2px;
+        background-color: $gainsboro;
+      }
     }
   }
-
-  
 
   .contentContainer {
     display: flex;
@@ -64,11 +61,10 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
-      &:hover {
-        box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 2px 2px,
-      rgba(60, 64, 67, 0.15) 1px 2px 3px 1px;
-
-      }
+    &:hover {
+      box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 2px 2px,
+        rgba(60, 64, 67, 0.15) 1px 2px 3px 1px;
+    }
     .imageContainer {
       img {
         width: 100%;
@@ -81,7 +77,7 @@
       position: absolute;
       clip-path: polygon(50% 64%, 100% 80%, 100% 0, 0 0, 0 79%);
       background-color: $safety-orange-blaze-orange;
-      padding: .5rem .3rem 0 .3rem;
+      padding: 0.5rem 0.3rem 0 0.3rem;
       width: 3rem;
       height: 5rem;
       top: 1rem;
@@ -143,6 +139,5 @@
     .buttonContainer {
       padding-top: 2rem;
     }
-
   }
 }
